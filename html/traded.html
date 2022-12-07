@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready to go!</title>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="buttons">
+            <button class="ruilenDoneren" onclick="gaTerug()">Ga terug</button>
+            <a class="ruilenDoneren" href="../index.html">Home</a>
+            <a class="ruilenDoneren" href="form.html">Ruilen</a>
+            <a class="ruilenDoneren" href="donateform.html">Doneren</a>
+        </div>
+    </div>
+    <header class="traded-donated-header timerHeader">
+        <p>Je krijgt 2 uur de tijd om je plantje op te halen!</p>
+    </header>
+    <main class="donated-traded-main">
+        <h1 class="titel">Ruil Gegevens</h1>
+        <div class="contentDonation">
+            <div class="googleMapsContent">
+                <p>U wordt verwacht op de volgende locatie:</p>
+                <img class="googleMapsFoto" src="/assets/googlemaps.png">
+            </div>
+            <div class="review">
+                <p class="meningText">Wat vond je van het proces? Geef je mening!</p>
+                <div class="stars">
+                    <img class="starIcon1 starIcon" src="/assets/star.png" onmouseover="fillStars(star = 1)"
+                        onmouseout="normallStars()">
+                    <img class="starIcon2 starIcon" src="/assets/star.png" onmouseover="fillStars(star = 2)"
+                        onmouseout="normallStars()">
+                    <img class="starIcon3 starIcon" src="/assets/star.png" onmouseover="fillStars(star = 3)"
+                        onmouseout="normallStars()">
+                    <img class="starIcon4 starIcon" src="/assets/star.png" onmouseover="fillStars(star = 4)"
+                        onmouseout="normallStars()">
+                    <img class="starIcon5 starIcon" src="/assets/star.png" onmouseover="fillStars(star = 5)"
+                        onmouseout="normallStars()">
+                </div>
+            </div>
+            <div class="generatedCode">
+                <p>Jouw gegenereerde code: <span>3TLJPp1</span></p>
+            </div>
+            <div class="ruilButtons">
+                <a href="form.html" class="ruilenDoneren">Meer ruilen</a>
+            </div>
+        </div>
+        <section class="informatieText">
+            <h1>Wilt u meer informatie over Plantswap?</h1>
+            <div class="meerInfoCard">
+                <p>Bezoek de website op <a class="buurtcampusOostLink"
+                    href="https://www.buurtcampusoost.nl/s/">buurtcampusoost.nl</a>, je kan ook vragen stellen aan
+                    de balie of aan de buurtbewoners!</p>
+            </div>
+        </section>
+    </main>
+    <div class="menu">
+        <button id="menuButton" onclick="menuOpen()">Menu</button>
+    </div>
+    <footer>
+    </footer>
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>

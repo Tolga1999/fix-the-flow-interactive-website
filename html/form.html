@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready to go!</title>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+    <!-- overlay menu -->
+    <div class="overlay">
+        <div class="buttons">
+            <button class="ruilenDoneren" onclick="gaTerug()">Ga terug</button>
+            <a class="ruilenDoneren" href="../index.html">Home</a>
+            <a class="ruilenDoneren" href="form.html">Ruilen</a>
+            <a class="ruilenDoneren" href="donateform.html">Doneren</a>
+        </div>
+    </div>
+    <!-- overlay plantjes kiezen -->
+    <div class="overlayPlant">
+        <div class="plantKeuzeOba">
+            <h1>Je kan maar 1 plantje reserveren per reservering</h1>
+            <!-- labels used for accessibility -->
+            <label class="planten" for="plant">
+                <input class="radioButton" type="radio" name="plant" value="" onclick="gekozenPlantje()">
+                <img class="plantenFoto" src="/assets/plant4.jpg" alt="plant1">
+            </label>
+
+            <label class="planten" for="plant">
+                <input class="radioButton" type="radio" name="plant" value="" onclick="gekozenPlantje()">
+                <img class="plantenFoto" src="/assets/plant2.jpg" alt="plant2">
+            </label>
+
+            <label class="planten" for="plant">
+                <input class="radioButton" type="radio" name="plant" value="" onclick="gekozenPlantje()">
+                <img class="plantenFoto" src="/assets/plant3.jpg" alt="plant3">
+            </label>
+
+            <label class="planten" for="plant">
+                <input class="radioButton" type="radio" name="plant" value="" onclick="gekozenPlantje()">
+                <img class="plantenFoto" src="/assets/plant5.jpg" alt="plant4">
+            </label>
+        </div>
+    </div>
+    <header>
+        <a href="../index.html">
+            <img class="logo" src="/assets/logoStyleguide.png" alt="plant logo">
+        </a>
+    </header>
+    <main>
+        <section class="sectionForm">
+            <h1 class="titelForm">Ruilen</h1>
+            <form onsubmit="tradedpage();return false">
+                <div class="labelInput">
+                    <div>
+                        <label for="naam">Naam</label>
+                        <input type="text" name="naam" required>
+                    </div>
+                    <div>
+                        <label for="mobiel">Mobiel</label>
+                        <input type="text" name="mobiel" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" required>
+                    </div>
+                </div>
+                <div class="plantInruilen">
+                    <p class="inruilText">Wat wil je inruilen?</p>
+                    <img class="kiesPlant" src="/assets/plant2.jpg" alt="kiesPlant">
+                    <input type="file" class="inputKiesPlant" accept="image/png, image/jpeg" onchange="selectedFile()"
+                        required> <!-- kieze een plantje op je computer -->
+                </div>
+                <img class="arrowDown" src="/assets/arrowDown.png" alt="arrowDown">
+                <div class="plantInruilen">
+                    <p class="inruilText">Wat voor plantje wil je?</p>
+                    <img class="kiesPlant kiesPlant2" src="/assets/plant2.jpg" alt="kiesPlant"
+                        onclick="kiezenPlantje()">
+                    <input type="button" class="inputKiesPlant" onclick="kiezenPlantje()" required>
+                </div>
+                <input class="submit" type="submit" value="Ruilen">
+            </form>
+        </section>
+
+        <div class="vragen">
+            <h2>Vragen of zoekt u contact?</h2>
+            <div class="vragenCard">
+                <p>U kunt ons altijd bereiken via mail, telefoon of op locatie van maandag t/m vrijdag van 09:00 tot
+                    18:00.
+                </p>
+                <p>Contactgegevens: <br>
+                    OBA Linnaeusstraat
+                    Linnaeusstraat 44
+                    1092 CL Amsterdam
+                    hello@buurtcampusoost.nl
+                </p>
+            </div>
+        </div>
+    </main>
+    <div class="menu">
+        <button id="menuButton" onclick="menuOpen()">Menu</button>
+    </div>
+    <footer>
+    </footer>
+    <script src="/scripts/index.js"></script>
+</body>
+
+</html>

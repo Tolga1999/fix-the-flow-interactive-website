@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <div class="contrastDiv">
+        <button class="contrastButton" onclick="veranderContrast()">
+            <img src="assets/contrast.png" alt="contrast knop"></button>
+    </div>
+    <div class="overlay">
+        <div class="buttons">
+            <button class="ruilenDoneren" onclick="gaTerug()">Ga terug</button>
+            <a class="ruilenDoneren" href="index.html">Home</a>
+            <a class="ruilenDoneren" href="html/form.html">Ruilen</a>
+            <a class="ruilenDoneren" href="html/donateform.html">Doneren</a>
+            <button class="ruilenDoneren" onclick="locationShowOverlayMenu()">Locatie</button>
+        </div>
+    </div>
+    <header>
+        <a href="index.html">
+            <img class="logo" src="assets/logoStyleguide.png" alt="plant logo">
+            <img class="logo logo-desktop" src="assets/plantswap-logo-white.png" alt="plant logo">
+        </a>
+        <nav>
+            <li><a href="index.html">Ruilen</a></li>
+            <li><a href="html/donateform.html">Doneren</a></li>
+            <li><button onclick="locationShow()" class="locationButton">Locatie</button></li>
+            <li><a href="/">Over ons</a></li>
+        </nav>
+        <div class="nav-icons">
+            <!-- SEARCH ICON -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="40" height="40"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="10" cy="10" r="7" />
+                <line x1="21" y1="21" x2="15" y2="15" />
+            </svg>
+            <!-- USER ICON -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="40"
+                height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="10" r="3" />
+                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+            </svg>
+        </div>
+    </header>
+    <main>
+        <div class="desktopPlanten">
+            <img class="plant plant1" src="assets/plant.jpg" alt="plant foto homepagina">
+            <img class="plant plant2" src="assets/cactus.jpg" alt="plant 2 foto homepagina">
+            <img class="plant plant3" src="assets/cactus2.jpg" alt="plant 3 foto homepagina">
+        </div>
+        <div class="homeContainer">
+            <h2 class="subtext">Hoe kunnen we je helpen?</h2>
+            <p>Binnen Plantswap kan je kiezen voor de opties ruilen of doneren. Met de optie ruilen kies je
+                uit onze beschikbare stekjes binnen de campus, geef je heel simpel je informatie en kan direct je
+                nieuwe stekje
+                ophalen!</p>
+            <div class="homeButtons">
+                <a class="ruilenDoneren" href="html/form.html">Ruilen</a>
+                <a class="ruilenDoneren" href="html/donateform.html">Doneren</a>
+            </div>
+        </div>
+
+        <section class="hoeWerktHet">
+            <h2>Hoe werkt het?</h2>
+            <div class="hoeWerktHetImg">
+                <img src="assets/womanstekje.jpg">
+                <div class="ruilenDonerenTextSection">
+                    <div class="ruilenDonerenText">
+                        <h3>Ruilen</h3>
+                        <p> Binnen Plantswap kan je kiezen voor de opties ruilen of doneren. Met de optie ruilen kies je
+                            uit onze beschikbare stekjes binnen de campus, geef je heel simpel je informatie en kan
+                            direct
+                            je
+                            nieuwe stekje
+                            ophalen! Je kan ook altijd een stekje of plantje doneren voor buurtbewoners.
+                        </p>
+                        <svg class="pijlers1Logo" xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-arrows-left-right" width="60" height="60"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <line x1="21" y1="17" x2="3" y2="17" />
+                            <path d="M6 10l-3 -3l3 -3" />
+                            <line x1="3" y1="7" x2="21" y2="7" />
+                            <path d="M18 20l3 -3l-3 -3" />
+                        </svg>
+                    </div>
+                    <!-- copy pasted for now -->
+                    <div class="ruilenDonerenText ruilenDonerenText2">
+                        <h3>Doneren</h3>
+                        <p> Binnen Plantswap kan je kiezen voor de opties ruilen of doneren. Met de optie ruilen kies je
+                            uit onze beschikbare stekjes binnen de campus, geef je heel simpel je informatie en kan
+                            direct
+                            je
+                            nieuwe stekje
+                            ophalen! Je kan ook altijd een stekje of plantje doneren voor buurtbewoners.
+                        </p>
+                        <svg class="pijlers1Logo" xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-gift" width="60" height="60" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <rect x="3" y="8" width="18" height="4" rx="1" />
+                            <line x1="12" y1="8" x2="12" y2="21" />
+                            <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" />
+                            <path
+                                d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pijlersAlles">
+            <h2>Onze Pijlers</h2>
+            <div class="pijlers-alles-desktop">
+                <div class="pijlers">
+                    <div class="pijlerFlexStart">
+                        <h3>Vitaliteit</h3>
+                        <p>Een vitaal persoon heeft een duidelijke wilskracht, beschikt over energie, lichamelijke
+                            kracht en
+                            weerbaarheid. Wij staan voor vitaliteit!</p>
+                        <!-- <img class="pijlers1Logo" src="/assets/openarms.png" alt="mediterende poppetje icon"> -->
+                        <svg class="pijlers1Logo" xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-heart" width="60" height="60" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="pijlers">
+                    <div class="pijlerFlexStart">
+                        <h3>Duurzaamheid</h3>
+                        <p>Duurzame ontwikkeling is een ontwikkeling die tegemoetkomt aan de levensbehoeften van de
+                            huidige
+                            generatie, zonder die van de toekomstige generaties tekort te doen.</p>
+                        <!-- <img class="pijlers1Logo" src="/assets/plant.png" alt="stekje icon"> -->
+                        <svg class="pijlers1Logo" xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-leaf" width="60" height="60" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 21c.5 -4.5 2.5 -8 7 -10" />
+                            <path d="M9 18c6.218 0 10.5 -3.288 11 -12v-2h-4.014c-9 0 -11.986 4 -12 9c0 1 0 3 2 5h3z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="pijlers">
+                    <div class="pijlerFlexStart">
+                        <h3>Samenwerken</h3>
+                        <p>Goed samenwerken is van doorslaggevend belang voor het behalen van de gewenste resultaten bij
+                            werk
+                            waar meerdere personen bij betrokken zijn.</p>
+                        <!-- <img class="pijlers1Logo" src="/assets/handshake.png" alt="handshake icon"> -->
+                        <svg class="pijlers1Logo" xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-hand-stop" width="60" height="60" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 13v-7.5a1.5 1.5 0 0 1 3 0v6.5" />
+                            <path d="M11 5.5v-2a1.5 1.5 0 1 1 3 0v8.5" />
+                            <path d="M14 5.5a1.5 1.5 0 0 1 3 0v6.5" />
+                            <path
+                                d="M17 7.5a1.5 1.5 0 0 1 3 0v8.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7a69.74 69.74 0 0 1 -.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="menu">
+        <button id="menuButton" onclick="menuOpen()">Menu</button>
+    </div>
+    <div class="location">
+        <div class="h2-button-location">
+            <h2>Locatie Plant Swap</h2>
+            <button class="close-location" onclick="closeLocation()"><svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-x" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.715133085179!2d4.923210197410937!3d52.35812027808528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60976cd336d71%3A0x6610b420a3c48f0e!2sLinnaeusstraat%2044%2C%201092%20CL%20Amsterdam!5e0!3m2!1snl!2snl!4v1669936471023!5m2!1snl!2snl"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    <footer>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,856 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+/* Custom properties */
+:root {
+    --primary-color-green: #4E7141;
+    --primary-color-blue: #333467;
+    --rgba-primary-color-blue: 51, 52, 103;
+    --primary-color-orange: #F86C24;
+    --background-color-white: #F3F0EE;
+    --text-color-white: #fff;
+}
+
+/* UTILITY CLASSES KAN JE NOG GEBRUIKEN */
+h2 {
+    margin-bottom: 3vh;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1vh;
+}
+
+.hoeWerktHet,
+.pijlersAlles {
+    max-width: 80rem;
+}
+
+/* font toegevoegd van buurtcampus */
+@font-face {
+    font-family: 'buurtcampus-bold';
+    src: url('/fonts/BuurtCampusArial-Bold.ttf');
+}
+
+body {
+    background-color: var(--background-color-white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigatie voor desktop */
+header {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+}
+
+.indexTitel {
+    font-family: 'buurtcampus-bold', sans-serif;
+    width: 50vw;
+    color: var(--primary-color-blue);
+    font-size: 2.5rem;
+    margin-top: 3vh;
+    align-self: flex-end;
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+    max-width: 15rem;
+    margin: auto;
+}
+
+.logo-desktop {
+    display: none;
+    width: 100%;
+    max-width: 9rem;
+    padding: 0.5rem 0;
+}
+
+nav,
+.nav-icons {
+    display: none;
+}
+
+nav li {
+    font-size: 1.2rem;
+    list-style-type: none;
+    padding: 0 1rem;
+}
+
+nav li a {
+    color: var(--text-color-white);
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+
+nav li a:hover {
+    color: var(--primary-color-orange);
+}
+
+.nav-icons svg {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* Navigatie END */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+/* een relative container met absolute items erin */
+.desktopPlanten {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+
+.plant {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: ease 1s;
+}
+
+/* planten worden getoond */
+.plantOn {
+    opacity: 1;
+}
+
+/* homecontainer */
+.homeContainer {
+    position: absolute;
+    top: 30%;
+    right: 12.5%;
+    left: 12.5%;
+    background-color: var(--primary-color-blue);
+    padding: 1.75rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    transform: translateY(-60vh);
+    transition: ease 0.5s;
+}
+
+.homeContainerOn {
+    transform: translateY(0vh);
+}
+
+.subtext {
+    color: var(--text-color-white);
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1vh;
+}
+
+.homeContainer p {
+    display: none;
+    color: var(--text-color-white);
+    font-size: 1.1rem;
+}
+
+.homeButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+.ruilenDoneren {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 50vw;
+    border: none;
+    color: var(--text-color-white);
+    background-color: var(--primary-color-green);
+    border-radius: 0.5rem;
+    /* exact values as Figma */
+    height: 60px;
+    width: 187px;
+    transition: ease 0.5s;
+    margin-top: 1.5vh;
+}
+
+.ruilenDoneren:hover {
+    background-color: var(--primary-color-orange);
+}
+
+/* Hoe werkt het section */
+.hoeWerktHet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 75vw;
+    margin-top: 3vh;
+}
+
+.hoeWerktHetImg {
+    display: flex;
+    flex-direction: row;
+}
+
+.hoeWerktHetImg>img {
+    display: none;
+    width: 50%;
+    max-width: 400px;
+    height: 600px;
+    border-radius: 0.5rem 0 0 0.5rem;
+    object-fit: cover;
+}
+
+.hoeWerktHet h2 {
+    color: var(--primary-color-blue);
+    font-size: 2rem;
+}
+
+/* class wordt toegevoegd aan .hoewerktHet met JS */
+.hoeWerktHetContrast {
+    border-top: var(--primary-color-orange) solid 3px;
+}
+
+.ruilenDonerenTextSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ruilenDonerenText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color-blue);
+    color: var(--background-color-white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    max-width: 650px;
+}
+
+.ruilenDonerenText:first-child {
+    margin-bottom: 3vh;
+}
+
+.ruilenDonerenText p {
+    font-size: 1.1rem;
+}
+
+/* PIJLERS ICONEN */
+.pijlersAlles {
+    width: 75vw;
+    margin-top: 3vh;
+    
+}
+
+.pijlersAlles h2 {
+    color: var(--primary-color-blue);
+    font-size: 2rem;
+    width: 75vw;
+}
+
+.pijlers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color-blue);
+    color: var(--text-color-white);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.pijlers+.pijlers {
+    margin-top: 3vh;
+}
+
+.pijlerFlexStart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.pijlers p {
+    font-size: 1.1rem;
+}
+
+.pijlers1Logo {
+    margin-top: 2vh;
+}
+
+.menu {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#menuButton {
+    color: var(--text-color-white);
+    font-size: 1.2rem;
+    background-color: var(--primary-color-green);
+    padding: 3.5vw;
+    width: 30vw;
+    border-radius: 1.5rem 1.5rem 0 0;
+    border: none;
+}
+
+/* MENU OVERLAY */
+.overlay,
+.overlayPlant {
+    visibility: hidden;
+    /* visibility: hidden zodat je niet kan klikken op de knoppen */
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(243, 240, 238, 0.8);
+    z-index: 2;
+    transition: ease 0.5s;
+    overflow: scroll;
+}
+
+/* opacity wordt veranderd zodat het menu zichtbaar is */
+.overlayOn {
+    visibility: visible;
+    opacity: 1;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+    flex-direction: column;
+    height: 100%;
+}
+
+.buttons > .ruilenDoneren{
+    margin-top: 4vh;
+}
+
+/* ------------ */
+
+/* CONTRAST BUTTON */
+.contrastDiv {
+    position: fixed;
+    z-index: 1;
+}
+
+.contrastButton {
+    border: none;
+    width: 0;
+}
+
+.contrastButton img {
+    width: 10vw;
+    max-width: 3.75rem;
+    margin: 0.5em;
+}
+
+/* ------------ */
+
+/* LOCATION */
+/* visibility: hidden zodat het niet meer klikbaar is, opacity om te werken met animaties */
+.location{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(25vw);
+    background-color: var(--primary-color-blue);
+    color: var(--text-color-white);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    right: 0%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%; /* nu heeft het aan beide kanten 1% ruimte */
+    max-width: 400px;
+    transition: ease 0.5s;
+}
+
+.h2-button-location{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 0.5rem;
+}
+
+.locationOn{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0vw);
+}
+
+.location h2{
+    margin: 0
+}
+
+.close-location{
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.close-location:hover{
+    background-color: var(--primary-color-green);
+}
+
+iframe{
+    width: 100%;
+}
+
+/* navigation location button */
+.locationButton{
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-color-white);
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+.locationButton:hover {
+    color: var(--primary-color-orange);
+}
+/* LOCATION END */
+
+/* MEDIA QUIRIES VOOR DESKTOP */
+@media (min-width: 768px) {
+
+    /* index.html */
+    .menu,
+    .logo,
+    .contrastButton {
+        display: none;
+    }
+
+    header {
+        background-color: var(--primary-color-blue);
+        justify-content: space-between;
+        padding: 0 4em;
+        position: sticky;
+        top: 0;
+    }
+
+    nav,
+    .logo-desktop,
+    .nav-icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .subtext {
+        font-size: 2rem;
+    }
+
+    .homeButtons, .pijlers-alles-desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .pijlers-alles-desktop{
+        align-items: stretch;
+    }
+
+    .homeButtons .ruilenDoneren {
+        margin: 0 0.75vw;
+    }
+
+    .hoeWerktHetImg>img, .homeContainer p{
+        display: inline;
+    }
+
+    .ruilenDonerenText {
+        border-radius: 0rem 0.5rem 0.5rem 0rem;
+    }
+
+    .pijlers+.pijlers {
+        margin-top: 0;
+        margin-left: 1vw;
+    }
+
+    .location{
+        right: 1%;
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    /* END index.html */
+}
+
+@media (min-width: 768px) and (max-width: 1250px) {
+    .ruilenDonerenText2 {
+        display: none;
+    }
+}
+
+/* ------------ FORMULIEREN PAGINA'S ------------- */
+.titelForm {
+    font-size: 2.75rem;
+    letter-spacing: 0.2rem;
+    margin: 0;
+    margin-top: 2vh;
+    color: var(--primary-color-blue);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid var(--primary-color-green);
+    border-radius: 0.5rem;
+    margin-top: 1vh;
+    /* alles standaard achter de overlay */
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+form label,
+input {
+    padding: 4vw;
+    margin: 1vw;
+}
+
+.labelInput {
+    padding: 7vw;
+    width: 75vw;
+}
+
+.labelInput div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+}
+
+input {
+    border: solid 3px #ccc;
+    height: 2.5vh;
+    transition: ease 0.5s 0.1s;
+    width: 40%;
+    font-size: 1rem;
+}
+
+input:focus {
+    border: solid 3px var(--primary-color-green);
+    outline: none;
+    width: 75%;
+}
+
+.submit {
+    color: #ffff;
+    background-color: var(--primary-color-green);
+    border: none;
+    border-radius: 0.5rem;
+    /* exact values as Figma */
+    height: 60px;
+    width: 187px;
+    font-size: 1.2rem;
+    margin-bottom: 3vh;
+}
+
+.plantInruilen {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.inruilText {
+    position: absolute;
+    z-index: 1;
+    font-size: 1.65rem;
+    font-weight: bold;
+    color: var(--primary-color-blue);
+    width: 60%;
+    margin: 0 0 0 5vw;
+}
+
+.kiesPlant {
+    height: 25vh;
+    width: 60vw;
+    margin-bottom: 2vh;
+    object-fit: cover;
+}
+
+.arrowDown {
+    width: 22.5vw;
+    margin-bottom: 1.5vh;
+}
+
+.inputKiesPlant {
+    position: absolute;
+    z-index: 5;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 60vw;
+    height: 20vh;
+    opacity: 0;
+}
+
+/* KIES PLANT VAN OBA */
+.plantKeuzeOba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5vh;
+}
+
+.plantKeuzeOba h1 {
+    margin-top: 3vh;
+    font-size: 2rem;
+    width: 90vw;
+    color: var(--primary-color-blue);
+}
+
+.planten {
+    margin-top: 5vh;
+}
+
+.radioButton {
+    position: absolute;
+    opacity: 0;
+    height: 30vh;
+}
+
+.plantenFoto {
+    height: 30vh;
+    width: 50vw;
+    object-fit: cover;
+}
+
+/* + selecteert de eerstvolgende sibling */
+.radioButton:checked+img {
+    outline: 2px solid #38853C;
+    /* outline is een lijn buiten de border */
+}
+
+/* END KIES PLANT OBA */
+
+.vragen {
+    margin-top: 3vh;
+    border-top: var(--primary-color-green) solid 3px;
+    padding-top: 2vh;
+    width: 90vw;
+}
+
+.vragen h2 {
+    color: var(--primary-color-blue);
+    font-size: 2rem;
+    margin-bottom: 0.5vh;
+}
+
+.vragenCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 18vh;
+    background-color: var(--primary-color-blue);
+    margin-top: 1.5vh;
+    color: var(--background-color-white);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+/* DONEER PAGINA */
+.doneerPlant {
+    object-fit: cover;
+    /* object wordt niet meer gestretched en houdt aspect ratio */
+    width: 75vw;
+    height: 40vh;
+    margin-bottom: 2vh;
+}
+
+.doneerText {
+    position: absolute;
+    z-index: 1;
+    font-size: 2.5rem;
+    width: 60%;
+    margin: 12vh 0 0 14vw;
+    color: var(--background-color-white);
+}
+
+.doneerInputKiesPlant {
+    position: absolute;
+    left: 10vw;
+    z-index: 5;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 77.5vw;
+    height: 40vh;
+    opacity: 0;
+}
+
+/* ------------ DONATED/TRADED PAGINA'S ------------- */
+.traded-donated-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 0;
+    height: 10vh;
+    background-color: var(--primary-color-blue);
+    color: var(--text-color-white);
+    font-size: 1.3rem;
+}
+
+.traded-donated-header p {
+    align-self: flex-end;
+    width: 80%;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1vh;
+}
+
+.donated-traded-main {
+    margin-top: 5vh;
+}
+
+.contentDonation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60vh;
+    width: 87vw;
+    border: 3px solid var(--primary-color-green);
+    border-radius: 0.5rem;
+    padding: 3vh 0;
+}
+
+.titel {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2vh;
+    color: var(--primary-color-blue);
+}
+
+.donateLogo {
+    width: 80%;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meningText {
+    font-size: 1.1rem;
+    width: 60%;
+    margin-top: 0.5vh;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vh;
+    width: 60%;
+}
+
+.starIcon {
+    width: 10vw;
+    color: var(--primary-color-blue);
+    opacity: 0.5;
+}
+
+.starIcon5:hover {
+    opacity: 1;
+}
+
+.generatedCode {
+    margin-top: 1vh;
+    width: 60%;
+    font-size: 1.1rem;
+}
+
+.generatedCode span {
+    display: inline-block;
+    /* inline block needed because its not a block element */
+    margin-top: 0.8vh;
+    font-weight: bold;
+    color: var(--primary-color-blue);
+}
+
+.googleMapsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.googleMapsContent p {
+    font-size: 1.1rem;
+    width: 80%;
+}
+
+.googleMapsFoto {
+    margin: 1vh 0;
+    width: 80%;
+}
+
+.informatieText h1 {
+    color: var(--primary-color-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1vh;
+}
+
+.meerInfoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--primary-color-blue);
+    color: #ffff;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.informatieText p {
+    font-size: 1.1rem;
+}
+
+.buurtcampusOostLink {
+    text-decoration: none;
+    color: var(--text-color-white);
+    font-weight: bold;
+}
+
+/* TRADED */
+.timerHeader {
+    background-color: var(--primary-color-green);
+}
+
+.informatieText {
+    width: 80vw;
+    margin: 3vh 0;
+}
