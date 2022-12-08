@@ -28,6 +28,7 @@ h3 {
 .hoeWerktHet,
 .pijlersAlles {
     max-width: 80rem;
+    align-self: center;
 }
 
 /* font toegevoegd van buurtcampus */
@@ -103,8 +104,6 @@ nav li a:hover {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 2vh;
 }
 
@@ -501,12 +500,26 @@ iframe{
         width: 100%;
         border-radius: 0.5rem 0.5rem 0 0;
     }
-
     /* END index.html */
 
     /* form.html */
-    form .desktop-form{
-        display: flex;
+    form{
+
+    }
+    .inputKiesPlant2, .inruilText2, .kiesPlant2{
+        display: none;
+    }
+
+    form .labels, form .plantInruilen{
+        margin-bottom: 2vw;
+    }
+
+    form .plantInruilen2{
+        margin: 0;
+    }
+
+    .labels > label{
+        margin-bottom: 1vw;
     }
     /* END form.html */
 }
@@ -518,7 +531,17 @@ iframe{
 }
 
 /* ------------ FORMULIEREN PAGINA'S ------------- */
-.titelForm {
+.form-section, .vragen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form, .vragen-h2, .vragen-card, .titel-form{
+    width: 90%;
+}
+
+.titel-form {
     font-size: 2.75rem;
     letter-spacing: 0.2rem;
     margin: 0;
@@ -531,18 +554,14 @@ form {
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
-    margin-top: 1vh;
+    margin-top: 0.5vh;
     padding: 1.75rem;
-    min-width: 35vw;
-
+    width: 90%;
+    max-width: 450px;
     /* alles standaard achter de overlay */
 }
 
-.labels, .plantInruilen{
-    margin-bottom: 4vw;
-}
-
-.labels, .plantInruilen2{
+.labels{
     margin-bottom: 8vw;
 }
 
@@ -573,6 +592,11 @@ input {
     display: flex;
     align-items: center;
     height: 100%;
+    margin-bottom: 4vw;
+}
+
+.plantInruilen2{
+    margin-bottom: 8vw;
 }
 
 .inruilText {
@@ -620,19 +644,22 @@ input {
 }
 
 .planten {
+    position: relative;
     align-items: center;
     margin-top: 5vh;
+    width: 50vw;
 }
 
 .radioButton {
     position: absolute;
     opacity: 0;
     height: 30vh;
+    width: 100%;
 }
 
 .plantenFoto {
     height: 30vh;
-    width: 50vw;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -661,8 +688,7 @@ input {
 /* END FORM */
 
 .vragen {
-    padding-top: 2vh;
-    width: 90vw;
+    margin-top: 2vh;
 }
 
 .vragen h2 {
@@ -671,15 +697,13 @@ input {
     margin-bottom: 0.5vh;
 }
 
-.vragenCard {
+.vragen-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 18vh;
     background-color: var(--primary-color-blue);
-    margin-top: 1.5vh;
     color: var(--background-color-white);
-    padding: 1.25rem;
+    padding: 2rem;
     border-radius: 0.5rem;
 }
 
