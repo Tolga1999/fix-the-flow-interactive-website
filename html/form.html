@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ready to go!</title>
     <link rel="stylesheet" href="/styles/index.css">
+    <script src="/scripts/index.js" defer></script>
 </head>
 
 <body>
@@ -51,22 +52,13 @@
         </a>
     </header>
     <main>
-        <section class="sectionForm">
+        <section>
             <h1 class="titelForm">Ruilen</h1>
             <form onsubmit="tradedpage();return false">
-                <div class="labelInput">
-                    <div>
-                        <label for="naam">Naam</label>
-                        <input type="text" name="naam" required>
-                    </div>
-                    <div>
-                        <label for="mobiel">Mobiel</label>
-                        <input type="text" name="mobiel" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="text" name="email" required>
-                    </div>
+                <div class="labels">
+                    <label for="naam">Naam <input type="text" name="naam" required></label>
+                    <label for="mobiel">Mobiel <input type="text" name="mobiel" required></label>
+                    <label for="email">Email <input type="text" name="email" required></label>
                 </div>
                 <div class="plantInruilen">
                     <p class="inruilText">Wat wil je inruilen?</p>
@@ -74,8 +66,8 @@
                     <input type="file" class="inputKiesPlant" accept="image/png, image/jpeg" onchange="selectedFile()"
                         required> <!-- kieze een plantje op je computer -->
                 </div>
-                <img class="arrowDown" src="/assets/arrowDown.png" alt="arrowDown">
-                <div class="plantInruilen">
+                <!-- <img class="arrowDown" src="/assets/arrowDown.png" alt="arrowDown"> -->
+                <div class="plantInruilen plantInruilen2">
                     <p class="inruilText">Wat voor plantje wil je?</p>
                     <img class="kiesPlant kiesPlant2" src="/assets/plant2.jpg" alt="kiesPlant"
                         onclick="kiezenPlantje()">
@@ -105,7 +97,6 @@
     </div>
     <footer>
     </footer>
-    <script src="/scripts/index.js"></script>
 </body>
 
 </html>

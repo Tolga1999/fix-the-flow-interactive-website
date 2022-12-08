@@ -503,6 +503,12 @@ iframe{
     }
 
     /* END index.html */
+
+    /* form.html */
+    /* form{
+        width: 30vw;
+    } */
+    /* END form.html */
 }
 
 @media (min-width: 768px) and (max-width: 1250px) {
@@ -521,13 +527,26 @@ iframe{
 }
 
 form {
+    background-color: var(--primary-color-blue);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: 3px solid var(--primary-color-green);
     border-radius: 0.5rem;
     margin-top: 1vh;
+    padding: 1.75rem;
+
     /* alles standaard achter de overlay */
+}
+
+.labels, .plantInruilen{
+    margin-bottom: 4vw;
+}
+
+.labels, .plantInruilen2{
+    margin-bottom: 8vw;
+}
+
+.labels label:last-child{
+    margin-bottom: 0;
 }
 
 label {
@@ -535,49 +554,18 @@ label {
     flex-direction: column;
     font-size: 1.25rem;
     font-weight: bold;
-}
-
-form label,
-input {
-    padding: 4vw;
-    margin: 1vw;
-}
-
-.labelInput {
-    padding: 7vw;
-    width: 75vw;
-}
-
-.labelInput div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3vh;
+    margin-bottom: 4vw;
+    color: var(--text-color-white);
+    width: 100%;
 }
 
 input {
     border: solid 3px #ccc;
-    height: 2.5vh;
     transition: ease 0.5s 0.1s;
-    width: 40%;
     font-size: 1rem;
-}
-
-input:focus {
-    border: solid 3px var(--primary-color-green);
-    outline: none;
-    width: 75%;
-}
-
-.submit {
-    color: #ffff;
-    background-color: var(--primary-color-green);
-    border: none;
+    margin-top: 1vh;
+    padding: 1rem 0.5rem;
     border-radius: 0.5rem;
-    /* exact values as Figma */
-    height: 60px;
-    width: 187px;
-    font-size: 1.2rem;
-    margin-bottom: 3vh;
 }
 
 .plantInruilen {
@@ -598,14 +586,9 @@ input:focus {
 
 .kiesPlant {
     height: 25vh;
-    width: 60vw;
-    margin-bottom: 2vh;
     object-fit: cover;
-}
-
-.arrowDown {
-    width: 22.5vw;
-    margin-bottom: 1.5vh;
+    width: 100%;
+    border-radius: 0.5rem;
 }
 
 .inputKiesPlant {
@@ -636,6 +619,7 @@ input:focus {
 }
 
 .planten {
+    align-items: center;
     margin-top: 5vh;
 }
 
@@ -656,12 +640,26 @@ input:focus {
     outline: 2px solid #38853C;
     /* outline is een lijn buiten de border */
 }
-
 /* END KIES PLANT OBA */
 
+.submit {
+    color: #ffff;
+    background-color: var(--primary-color-green);
+    border: none;
+    border-radius: 0.5rem;
+    /* exact values as Figma */
+    height: 60px;
+    width: 187px;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.arrowDown, .submit{
+    align-self: center;
+}
+/* END FORM */
+
 .vragen {
-    margin-top: 3vh;
-    border-top: var(--primary-color-green) solid 3px;
     padding-top: 2vh;
     width: 90vw;
 }
