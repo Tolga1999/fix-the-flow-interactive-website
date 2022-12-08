@@ -505,9 +505,9 @@ iframe{
     /* END index.html */
 
     /* form.html */
-    /* form{
-        width: 30vw;
-    } */
+    form .desktop-form{
+        display: flex;
+    }
     /* END form.html */
 }
 
@@ -533,6 +533,7 @@ form {
     border-radius: 0.5rem;
     margin-top: 1vh;
     padding: 1.75rem;
+    min-width: 35vw;
 
     /* alles standaard achter de overlay */
 }
@@ -597,7 +598,7 @@ input {
     border: none;
     margin: 0;
     padding: 0;
-    width: 60vw;
+    min-width: 30vw;
     height: 20vh;
     opacity: 0;
 }
