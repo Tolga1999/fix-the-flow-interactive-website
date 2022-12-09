@@ -522,6 +522,10 @@ iframe{
         margin-bottom: 1vw;
     }
 
+    .plant-keuze-oba-desktop-alles .plant-keuze-oba-desktop-h2{
+        display: flex;
+    }
+
     .content-form .plant-keuze-oba-desktop{
         display: flex;
     }
@@ -684,6 +688,14 @@ input {
 /* END KIES PLANT OBA MOBILE*/
 
 /* KIES PLANT VAN OBA DESKTOP*/
+.plant-keuze-oba-desktop-h2{
+    display: none;
+    font-size: 2.75rem;
+    color: var(--primary-color-blue);
+    margin: 0;
+    margin-left: 5vw;
+    /* margin-bottom: 0.75rem; */
+}
 .plant-keuze-oba-desktop{
     display: none;
     background-color: var(--primary-color-blue);

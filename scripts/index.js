@@ -248,3 +248,8 @@ document.querySelector('.hard-filter-button').addEventListener('click', function
     });
 })
 
+filterImagesEasy.forEach(easyImage => {
+    easyImage.addEventListener('click', function(){
+        console.log(easyImage);
+    })
+});
