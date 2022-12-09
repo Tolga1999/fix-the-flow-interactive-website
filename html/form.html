@@ -48,7 +48,7 @@
     </div>
     <header>
         <a href="/index.html">
-            <img class="logo" src="assets/logoStyleguide.png" alt="plant logo">
+            <img class="logo" src="/assets/logoStyleguide.png" alt="plant logo">
             <img class="logo logo-desktop" src="/assets/plantswap-logo-white.png" alt="plant logo">
         </a>
         <nav>
@@ -78,29 +78,50 @@
         </div>
     </header>
     <main>
-        <section class="form-section">
-            <h1 class="titel-form">Ruilen</h1>
-            <form onsubmit="tradedpage();return false">
-                <div class="labels">
-                    <label for="naam">Naam <input type="text" name="naam" required></label>
-                    <label for="mobiel">Mobiel <input type="text" name="mobiel" required></label>
-                    <label for="email">Email <input type="text" name="email" required></label>
+        <section class="content-form">
+            <fieldset>
+                <legend>
+                    <h1 class="titel-form">Ruilen</h1>
+                </legend>
+                <form onsubmit="tradedpage();return false">
+                    <div class="labels">
+                        <label for="naam">Naam <input type="text" name="naam" required></label>
+                        <label for="mobiel">Mobiel <input type="text" name="mobiel" required></label>
+                        <label for="email">Email <input type="text" name="email" required></label>
+                    </div>
+                    <div class="plantInruilen">
+                        <p class="inruilText">Wat wil je inruilen?</p>
+                        <img class="kiesPlant" src="/assets/plant2.jpg" alt="kiesPlant">
+                        <input type="file" class="inputKiesPlant" accept="image/png, image/jpeg"
+                            onchange="selectedFile()" required> <!-- kieze een plantje op je computer -->
+                    </div>
+                    <!-- <img class="arrowDown" src="/assets/arrowDown.png" alt="arrowDown"> -->
+                    <div class="plantInruilen plantInruilen2">
+                        <p class="inruilText inruilText2">Wat voor plantje wil je?</p>
+                        <img class="kiesPlant kiesPlant2" src="/assets/plant2.jpg" alt="kiesPlant"
+                            onclick="kiezenPlantje()">
+                        <input type="button" class="inputKiesPlant inputKiesPlant2" onclick="kiezenPlantje()" required>
+                    </div>
+                    <input class="submit" type="submit" value="Ruilen">
+                </form>
+            </fieldset>
+            <section class="plant-keuze-oba-desktop">
+                <div class="desktop-images">
+                    <img class="filter-image-easy" src="/assets/cactus.jpg" alt="cactus desktop">
+                    <img class="filter-image-hard" src="/assets/plant.jpg" alt="cactus2 desktop">
+                    <img class="filter-image-easy" src="/assets/cactus2.jpg" alt="cactus2 desktop">
+                    <img class="filter-image-hard" src="/assets/cactus2.jpg" alt="cactus2 desktop">
+                    <img class="filter-image-easy" src="/assets/cactus2.jpg" alt="cactus2 desktop">
+                    <img class="filter-image-hard" src="/assets/cactus2.jpg" alt="cactus2 desktop">
+                    <img class="filter-image-easy" src="/assets/cactus2.jpg" alt="cactus2 desktop">
+                    <img class="filter-image-hard" src="/assets/cactus2.jpg" alt="cactus2 desktop">
                 </div>
-                <div class="plantInruilen">
-                    <p class="inruilText">Wat wil je inruilen?</p>
-                    <img class="kiesPlant" src="/assets/plant2.jpg" alt="kiesPlant">
-                    <input type="file" class="inputKiesPlant" accept="image/png, image/jpeg" onchange="selectedFile()"
-                        required> <!-- kieze een plantje op je computer -->
+
+                <div class="desktop-filter-buttons">
+                    <button class="easy-filter-button">Makkelijk</button>
+                    <button class="hard-filter-button">Moeilijk</button>
                 </div>
-                <!-- <img class="arrowDown" src="/assets/arrowDown.png" alt="arrowDown"> -->
-                <div class="plantInruilen plantInruilen2">
-                    <p class="inruilText inruilText2">Wat voor plantje wil je?</p>
-                    <img class="kiesPlant kiesPlant2" src="/assets/plant2.jpg" alt="kiesPlant"
-                        onclick="kiezenPlantje()">
-                    <input type="button" class="inputKiesPlant inputKiesPlant2" onclick="kiezenPlantje()" required>
-                </div>
-                <input class="submit" type="submit" value="Ruilen">
-            </form>
+            </section>
         </section>
 
         <div class="vragen">

@@ -503,8 +503,8 @@ iframe{
     /* END index.html */
 
     /* form.html */
-    form{
-
+    .content-form form{
+        margin-top: 0;
     }
     .inputKiesPlant2, .inruilText2, .kiesPlant2{
         display: none;
@@ -521,6 +521,10 @@ iframe{
     .labels > label{
         margin-bottom: 1vw;
     }
+
+    .content-form .plant-keuze-oba-desktop{
+        display: flex;
+    }
     /* END form.html */
 }
 
@@ -531,21 +535,30 @@ iframe{
 }
 
 /* ------------ FORMULIEREN PAGINA'S ------------- */
-.form-section, .vragen{
+.content-form{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;    
+    flex-direction: row;
+    margin-top: 2vh;
+}
+
+.content-form .plant-keuze-oba-desktop:last-child{
+    margin-left: 5vw;
 }
 
 form, .vragen-h2, .vragen-card, .titel-form{
     width: 90%;
 }
 
+fieldset{
+    border: none;
+    justify-self: center;
+}
+
 .titel-form {
     font-size: 2.75rem;
     letter-spacing: 0.2rem;
     margin: 0;
-    margin-top: 2vh;
     color: var(--primary-color-blue);
 }
 
@@ -556,7 +569,7 @@ form {
     border-radius: 0.5rem;
     margin-top: 0.5vh;
     padding: 1.75rem;
-    width: 90%;
+    width: 100%;
     max-width: 450px;
     /* alles standaard achter de overlay */
 }
@@ -606,7 +619,7 @@ input {
     font-weight: bold;
     color: var(--primary-color-blue);
     width: 60%;
-    margin: 0 0 0 5vw;
+    margin: 0 0 0 1rem;
 }
 
 .kiesPlant {
@@ -627,7 +640,7 @@ input {
     opacity: 0;
 }
 
-/* KIES PLANT VAN OBA */
+/* KIES PLANT VAN OBA MOBILE*/
 .plantKeuzeOba {
     display: flex;
     flex-direction: column;
@@ -668,7 +681,69 @@ input {
     outline: 2px solid #38853C;
     /* outline is een lijn buiten de border */
 }
-/* END KIES PLANT OBA */
+/* END KIES PLANT OBA MOBILE*/
+
+/* KIES PLANT VAN OBA DESKTOP*/
+.plant-keuze-oba-desktop{
+    display: none;
+    background-color: var(--primary-color-blue);
+    border-radius: 0.5rem;
+    max-width: 625px;
+}
+
+.desktop-images{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.desktop-images > img{
+    object-fit: cover;
+    width: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    transition: ease 0.25s;
+}
+
+.desktop-images > img:hover{
+    opacity: 0.5;
+}
+
+/* DEZE CLASS IS VOOR JAVASCRIPT */
+.active{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.desktop-filter-buttons{
+    padding: 1rem;
+}
+
+.desktop-filter-buttons button{
+    /* width: 10vw;
+    height: 5vh; */
+    color: var(--text-color-white);
+    background-color: var(--primary-color-green);
+    border: none;
+    border-radius: 0.5rem;
+    /* exact values as Figma */
+    height: 60px;
+    width: 187px;
+    font-size: 1.2rem;
+    margin: 0;
+    align-self: center;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+.desktop-filter-buttons button:hover{
+    background-color: var(--primary-color-orange);
+}
+
+.desktop-filter-buttons button:nth-child(2){
+    margin-top: 1vh;
+}
+/* END KIES PLANT OBA DESKTOP*/
 
 .submit {
     color: #ffff;
@@ -680,14 +755,14 @@ input {
     width: 187px;
     font-size: 1.2rem;
     margin: 0;
-}
-
-.arrowDown, .submit{
     align-self: center;
 }
 /* END FORM */
 
 .vragen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 2vh;
 }
 
@@ -695,16 +770,19 @@ input {
     color: var(--primary-color-blue);
     font-size: 2rem;
     margin-bottom: 0.5vh;
+    max-width: 700px;
 }
 
 .vragen-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     background-color: var(--primary-color-blue);
     color: var(--background-color-white);
     padding: 2rem;
     border-radius: 0.5rem;
+    width: 95%;
+    max-width: 700px;
 }
 
 /* DONEER PAGINA */

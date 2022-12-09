@@ -228,3 +228,23 @@ let locationButton = document.querySelector('.close-location');
 function closeLocation() {
     map.classList.remove('locationOn');
 }
+
+// FORM PAGINA
+
+// FILTEREN IMGAGES
+// select images
+let filterImagesEasy = document.querySelectorAll('.filter-image-easy');
+let filterImagesHard = document.querySelectorAll('.filter-image-hard');
+
+document.querySelector('.easy-filter-button').addEventListener('click', function(){
+    filterImagesHard.forEach(hardImage => {
+        hardImage.classList.toggle('active');
+    });
+})
+
+document.querySelector('.hard-filter-button').addEventListener('click', function(){
+    filterImagesEasy.forEach(easyImage => {
+        easyImage.classList.toggle('active');
+    });
+})
+
