@@ -188,7 +188,6 @@ let plantHomepage3 = document.querySelector('.plant3');
 let whichPlant = "plant2";
 
 // load first image before setInterval function ALLEEN VOOR INDEX.HTML
-
 plantHomepage.classList.add('plantOn');
 
 // setInterval used to call the funtion every 2 seconds or 2000 milliseconds
