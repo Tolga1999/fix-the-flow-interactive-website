@@ -188,32 +188,32 @@ let plantHomepage3 = document.querySelector('.plant3');
 let whichPlant = "plant2";
 
 // load first image before setInterval function ALLEEN VOOR INDEX.HTML
-if (document.location.pathname == "/index.html") {
-    plantHomepage.classList.add('plantOn');
 
-    // setInterval used to call the funtion every 2 seconds or 2000 milliseconds
-    const interval = setInterval(timerCall, 2000);
+plantHomepage.classList.add('plantOn');
 
-    function timerCall() {
-        if (whichPlant == "plant2") {
-            plantHomepage.classList.remove('plantOn');
-            plantHomepage2.classList.add('plantOn');
-            whichPlant = "plant3";
-        } else if (whichPlant == "plant3") {
-            plantHomepage2.classList.remove('plantOn');
-            plantHomepage3.classList.add('plantOn');
-            whichPlant = "plant1";
-        } else if (whichPlant == "plant1") {
-            plantHomepage3.classList.remove('plantOn');
-            plantHomepage.classList.add('plantOn');
-            whichPlant = "plant2"
-        }
-    };
+// setInterval used to call the funtion every 2 seconds or 2000 milliseconds
+const interval = setInterval(timerCall, 2000);
 
-    // load in homecontainer options
-    let homeContainer = document.querySelector('.homeContainer');
-    homeContainer.classList.add('homeContainerOn');
-}
+function timerCall() {
+    if (whichPlant == "plant2") {
+        plantHomepage.classList.remove('plantOn');
+        plantHomepage2.classList.add('plantOn');
+        whichPlant = "plant3";
+    } else if (whichPlant == "plant3") {
+        plantHomepage2.classList.remove('plantOn');
+        plantHomepage3.classList.add('plantOn');
+        whichPlant = "plant1";
+    } else if (whichPlant == "plant1") {
+        plantHomepage3.classList.remove('plantOn');
+        plantHomepage.classList.add('plantOn');
+        whichPlant = "plant2"
+    }
+};
+
+// load in homecontainer options
+let homeContainer = document.querySelector('.homeContainer');
+homeContainer.classList.add('homeContainerOn');
+
 
 // LOCATION MAP
 // show location on map
@@ -236,20 +236,20 @@ function closeLocation() {
 let filterImagesEasy = document.querySelectorAll('.filter-image-easy');
 let filterImagesHard = document.querySelectorAll('.filter-image-hard');
 
-document.querySelector('.easy-filter-button').addEventListener('click', function(){
+document.querySelector('.easy-filter-button').addEventListener('click', function () {
     filterImagesHard.forEach(hardImage => {
         hardImage.classList.toggle('active');
     });
 })
 
-document.querySelector('.hard-filter-button').addEventListener('click', function(){
+document.querySelector('.hard-filter-button').addEventListener('click', function () {
     filterImagesEasy.forEach(easyImage => {
         easyImage.classList.toggle('active');
     });
 })
 
 filterImagesEasy.forEach(easyImage => {
-    easyImage.addEventListener('click', function(){
+    easyImage.addEventListener('click', function () {
         console.log(easyImage);
     })
 });
