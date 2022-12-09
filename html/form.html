@@ -16,8 +16,8 @@
         <div class="buttons">
             <button class="ruilenDoneren" onclick="gaTerug()">Ga terug</button>
             <a class="ruilenDoneren" href="../index.html">Home</a>
-            <a class="ruilenDoneren" href="form.html">Ruilen</a>
-            <a class="ruilenDoneren" href="donateform.html">Doneren</a>
+            <a class="ruilenDoneren" href="./form.html">Ruilen</a>
+            <a class="ruilenDoneren" href="./donateform.html">Doneren</a>
         </div>
     </div>
     <!-- overlay plantjes kiezen -->
@@ -27,33 +27,33 @@
             <!-- labels used for accessibility -->
             <label class="planten" for="plant">
                 <input class="radioButton" type="radio" name="plant" value="" onclick="gekozenPlantje()">
-                <img class="plantenFoto" src="/assets/plant4.jpg" alt="plant1">
+                <img class="plantenFoto" src="../assets/plant4.jpg" alt="plant1">
             </label>
 
             <label class="planten" for="plant">
                 <input class="radioButton" type="radio" name="plant" value="" onclick="gekozenPlantje()">
-                <img class="plantenFoto" src="/assets/plant2.jpg" alt="plant2">
+                <img class="plantenFoto" src="../assets/plant2.jpg" alt="plant2">
             </label>
 
             <label class="planten" for="plant">
                 <input class="radioButton" type="radio" name="plant" value="" onclick="gekozenPlantje()">
-                <img class="plantenFoto" src="/assets/plant3.jpg" alt="plant3">
+                <img class="plantenFoto" src="../assets/plant3.jpg" alt="plant3">
             </label>
 
             <label class="planten" for="plant">
                 <input class="radioButton" type="radio" name="plant" value="" onclick="gekozenPlantje()">
-                <img class="plantenFoto" src="/assets/plant5.jpg" alt="plant4">
+                <img class="plantenFoto" src="../assets/plant5.jpg" alt="plant4">
             </label>
         </div>
     </div>
     <header>
-        <a href="/index.html">
-            <img class="logo" src="/assets/logoStyleguide.png" alt="plant logo">
-            <img class="logo logo-desktop" src="/assets/plantswap-logo-white.png" alt="plant logo">
+        <a href="../index.html">
+            <img class="logo" src="../assets/logoStyleguide.png" alt="plant logo">
+            <img class="logo logo-desktop" src="../assets/plantswap-logo-white.png" alt="plant logo">
         </a>
         <nav>
-            <li><a href="index.html">Ruilen</a></li>
-            <li><a href="html/donateform.html">Doneren</a></li>
+            <li><a href="../index.html">Ruilen</a></li>
+            <li><a href="./html/donateform.html">Doneren</a></li>
             <li><button onclick="locationShow()" class="locationButton">Locatie</button></li>
             <li><a href="/">Over ons</a></li>
         </nav>
@@ -91,14 +91,14 @@
                     </div>
                     <div class="plantInruilen">
                         <p class="inruilText">Wat wil je inruilen?</p>
-                        <img class="kiesPlant" src="/assets/plant2.jpg" alt="kiesPlant">
+                        <img class="kiesPlant" src="../assets/plant2.jpg" alt="kiesPlant">
                         <input type="file" class="inputKiesPlant" accept="image/png, image/jpeg"
                             onchange="selectedFile()" required> <!-- kieze een plantje op je computer -->
                     </div>
                     <!-- <img class="arrowDown" src="/assets/arrowDown.png" alt="arrowDown"> -->
                     <div class="plantInruilen plantInruilen2">
                         <p class="inruilText inruilText2">Wat voor plantje wil je?</p>
-                        <img class="kiesPlant kiesPlant2" src="/assets/plant2.jpg" alt="kiesPlant"
+                        <img class="kiesPlant kiesPlant2" src="../assets/plant2.jpg" alt="kiesPlant"
                             onclick="kiezenPlantje()">
                         <input type="button" class="inputKiesPlant inputKiesPlant2" onclick="kiezenPlantje()" required>
                     </div>
