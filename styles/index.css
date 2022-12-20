@@ -344,25 +344,6 @@ main {
 
 /* ------------ */
 
-/* CONTRAST BUTTON */
-.contrastDiv {
-    position: fixed;
-    z-index: 1;
-}
-
-.contrastButton {
-    border: none;
-    width: 0;
-}
-
-.contrastButton img {
-    width: 10vw;
-    max-width: 3.75rem;
-    margin: 0.5em;
-}
-
-/* ------------ */
-
 /* LOCATION */
 /* visibility: hidden zodat het niet meer klikbaar is, opacity om te werken met animaties */
 .location{
@@ -440,8 +421,7 @@ iframe{
 
     /* index.html */
     .menu,
-    .logo,
-    .contrastButton {
+    .logo{
         display: none;
     }
 

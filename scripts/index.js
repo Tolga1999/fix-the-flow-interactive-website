@@ -130,57 +130,6 @@ function normallStars() {
     star5.style.opacity = '0.5';
 }
 
-function veranderContrast() {
-    let headings = document.querySelectorAll('h1, h2');
-    let pijlers = document.querySelectorAll('.pijlers');
-    let buttons = document.querySelectorAll('.ruilenDoneren');
-
-    // background van body
-    document.body.style.background = "#000000";
-
-    // uitleg text
-    let uitleg = document.querySelector('.ruilenDonerenText');
-    uitleg.style.background = "#000000";
-    uitleg.style.color = "#AAC789";
-    uitleg.style.border = "2px solid #AAC789";
-
-    // menu button
-    let menu = document.querySelector('#menuButton');
-    menu.style.background = "#AAC789";
-    menu.style.color = "#000000";
-
-    // overlay background
-    let overlayBackground = document.querySelector('.overlay');
-    overlayBackground.style.background = "#000000E5";
-
-    // contrast button
-    let contrastImage = document.querySelector('.contrastImage');
-    contrastImage.src = "/assets/contrast1.png";
-
-    // hoe werkt het border top
-    let borderTop = document.querySelector('.hoeWerktHet');
-    borderTop.classList.add("hoeWerktHetContrast"); // dit is een class die toegevoegd wordt aan de class hoeWerktHet, de class bestaat al in css
-
-    for (let i = 0; i < headings.length; i++) {
-        // headings
-        headings[i].style.color = "#AAC789";
-    }
-
-    for (let i = 0; i < pijlers.length; i++) {
-        // pijlers
-        pijlers[i].style.background = "#000000";
-        pijlers[i].style.border = "2px solid #AAC789";
-        pijlers[i].style.color = "#AAC789";
-    }
-
-    for (let i = 0; i < buttons.length; i++) {
-        // buttons
-        buttons[i].style.background = "#AAC789";
-        buttons[i].style.color = "#000000";
-
-    }
-}
-
 // IMAGE LOOP
 let plantHomepage = document.querySelector('.plant');
 let plantHomepage2 = document.querySelector('.plant2');
