@@ -206,3 +206,12 @@ filterImagesEasy.forEach(easyImage => {
         console.log(easyImage);
     })
 });
+
+// filter button volgende
+document.querySelector('.filter-volgende-button').addEventListener('click', function () {
+    console.log("hallo")
+    let form = document.querySelector('fieldset');
+    form.classList.add('fieldset-show');
+    let filterImages = document.querySelector('.plant-keuze-oba-desktop-alles');
+    filterImages.classList.add('plant-keuze-oba-desktop-alles-hide');
+})

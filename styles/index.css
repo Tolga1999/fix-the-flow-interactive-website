@@ -104,6 +104,7 @@ nav li a:hover {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 2vh;
 }
 
@@ -486,7 +487,12 @@ iframe{
     .content-form form{
         margin-top: 0;
     }
-    .inputKiesPlant2, .inruilText2, .kiesPlant2{
+
+    .desktop-fieldset{
+        width: 100%;
+    }
+
+    .inputKiesPlant2, .inruilText2, .kiesPlant2, fieldset{
         display: none;
     }
 
@@ -506,6 +512,10 @@ iframe{
         display: flex;
     }
 
+    .plant-keuze-oba-desktop-alles-hide{
+        display: none
+    }
+
     .content-form .plant-keuze-oba-desktop{
         display: flex;
         flex-direction: column;
@@ -522,9 +532,22 @@ iframe{
 /* ------------ FORMULIEREN PAGINA'S ------------- */
 .content-form{
     display: flex;
-    justify-content: center;    
-    flex-direction: row;
+    flex-direction: column;   
+    align-items: center;
     margin-top: 2vh;
+    width: 100%;
+    max-width: 700px;
+}
+
+.progression-bar{
+    width: 100%;
+}
+
+.progression-bar-content{
+    width: 50%;
+    background: var(--primary-color-orange);
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 form, .vragen-h2, .vragen-card, .titel-form{
@@ -535,7 +558,11 @@ fieldset{
     border: none;
     justify-self: center;
     width: 95%;
-    max-width: 700px;
+}
+
+/* JS class */
+.fieldset-show{
+    display: inline;
 }
 
 .titel-form {
@@ -669,8 +696,8 @@ input {
 .plant-keuze-oba-desktop{
     display: none;
     background-color: var(--primary-color-blue);
-    border-radius: 0.5rem;
-    max-width: 625px;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    max-width: 700px;
 }
 
 .desktop-images{
@@ -732,6 +759,16 @@ input {
     margin-right: 1vw;
 }
 
+.filter-volgende-button{
+    margin: 1rem 0;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+.filter-volgende-button:hover{
+    background-color: var(--primary-color-orange);
+}
+
 /* END KIES PLANT OBA DESKTOP*/
 
 .submit {
@@ -743,7 +780,6 @@ input {
     height: 60px;
     width: 187px;
     font-size: 1.2rem;
-    margin: 0;
     align-self: center;
 }
 /* END FORM */
@@ -753,6 +789,7 @@ input {
     flex-direction: column;
     align-items: center;
     margin-top: 2vh;
+    width: 100%;
 }
 
 .vragen h2 {
