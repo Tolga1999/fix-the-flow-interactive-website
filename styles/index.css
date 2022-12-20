@@ -720,7 +720,7 @@ input {
     align-self: center;
     transition: ease 0.5s;
     cursor: pointer;
-    padding: 1rem;
+    padding: 0.9rem;
     width: 25%;
 }
 
