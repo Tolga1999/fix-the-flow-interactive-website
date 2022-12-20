@@ -502,12 +502,13 @@ iframe{
         margin-bottom: 1vw;
     }
 
-    .plant-keuze-oba-desktop-alles .plant-keuze-oba-desktop-h2{
+    .plant-keuze-oba-desktop-alles{
         display: flex;
     }
 
     .content-form .plant-keuze-oba-desktop{
         display: flex;
+        flex-direction: column;
     }
     /* END form.html */
 }
@@ -526,10 +527,6 @@ iframe{
     margin-top: 2vh;
 }
 
-.content-form .plant-keuze-oba-desktop:last-child{
-    margin-left: 5vw;
-}
-
 form, .vragen-h2, .vragen-card, .titel-form{
     width: 90%;
 }
@@ -537,6 +534,8 @@ form, .vragen-h2, .vragen-card, .titel-form{
 fieldset{
     border: none;
     justify-self: center;
+    width: 95%;
+    max-width: 700px;
 }
 
 .titel-form {
@@ -554,7 +553,6 @@ form {
     margin-top: 0.5vh;
     padding: 1.75rem;
     width: 100%;
-    max-width: 450px;
     /* alles standaard achter de overlay */
 }
 
@@ -668,14 +666,6 @@ input {
 /* END KIES PLANT OBA MOBILE*/
 
 /* KIES PLANT VAN OBA DESKTOP*/
-.plant-keuze-oba-desktop-h2{
-    display: none;
-    font-size: 2.75rem;
-    color: var(--primary-color-blue);
-    margin: 0;
-    margin-left: 5vw;
-    /* margin-bottom: 0.75rem; */
-}
 .plant-keuze-oba-desktop{
     display: none;
     background-color: var(--primary-color-blue);
@@ -685,7 +675,7 @@ input {
 
 .desktop-images{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -708,33 +698,40 @@ input {
 }
 
 .desktop-filter-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 
+.desktop-filter-buttons > p{
+    color: var(--text-color-white);
+    font-size: 1.2rem;
+    margin-right: 1vw;
+}
+
 .desktop-filter-buttons button{
-    /* width: 10vw;
-    height: 5vh; */
     color: var(--text-color-white);
     background-color: var(--primary-color-green);
     border: none;
     border-radius: 0.5rem;
     /* exact values as Figma */
-    height: 60px;
-    width: 187px;
-    font-size: 1.2rem;
-    margin: 0;
+    font-size: 1rem;
     align-self: center;
     transition: ease 0.5s;
     cursor: pointer;
+    padding: 1rem;
+    width: 25%;
 }
 
 .desktop-filter-buttons button:hover{
     background-color: var(--primary-color-orange);
 }
 
-.desktop-filter-buttons button:nth-child(2){
-    margin-top: 1vh;
+.easy-filter-button{
+    margin-right: 1vw;
 }
+
 /* END KIES PLANT OBA DESKTOP*/
 
 .submit {
@@ -775,6 +772,14 @@ input {
     border-radius: 0.5rem;
     width: 95%;
     max-width: 700px;
+}
+
+.vragen-card p{
+    font-size: 1rem;
+}
+
+.vragen-card-p + .vragen-card-p{
+    margin-top: 2vh;
 }
 
 /* DONEER PAGINA */

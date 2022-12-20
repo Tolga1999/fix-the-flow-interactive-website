@@ -130,37 +130,40 @@ function normallStars() {
     star5.style.opacity = '0.5';
 }
 
-// IMAGE LOOP
-let plantHomepage = document.querySelector('.plant');
-let plantHomepage2 = document.querySelector('.plant2');
-let plantHomepage3 = document.querySelector('.plant3');
-let whichPlant = "plant2";
+// gebruik dit stukje code alleen bij index.html
+if (document.location.pathname == '/index.html') {
+    // IMAGE LOOP
+    let plantHomepage = document.querySelector('.plant');
+    let plantHomepage2 = document.querySelector('.plant2');
+    let plantHomepage3 = document.querySelector('.plant3');
+    let whichPlant = "plant2";
 
-// load first image before setInterval function ALLEEN VOOR INDEX.HTML
-plantHomepage.classList.add('plantOn');
+    // load first image before setInterval function ALLEEN VOOR INDEX.HTML
+    plantHomepage.classList.add('plantOn');
 
-// setInterval used to call the funtion every 2 seconds or 2000 milliseconds
-const interval = setInterval(timerCall, 2000);
+    // setInterval used to call the funtion every 2 seconds or 2000 milliseconds
+    const interval = setInterval(timerCall, 2000);
 
-function timerCall() {
-    if (whichPlant == "plant2") {
-        plantHomepage.classList.remove('plantOn');
-        plantHomepage2.classList.add('plantOn');
-        whichPlant = "plant3";
-    } else if (whichPlant == "plant3") {
-        plantHomepage2.classList.remove('plantOn');
-        plantHomepage3.classList.add('plantOn');
-        whichPlant = "plant1";
-    } else if (whichPlant == "plant1") {
-        plantHomepage3.classList.remove('plantOn');
-        plantHomepage.classList.add('plantOn');
-        whichPlant = "plant2"
-    }
-};
+    function timerCall() {
+        if (whichPlant == "plant2") {
+            plantHomepage.classList.remove('plantOn');
+            plantHomepage2.classList.add('plantOn');
+            whichPlant = "plant3";
+        } else if (whichPlant == "plant3") {
+            plantHomepage2.classList.remove('plantOn');
+            plantHomepage3.classList.add('plantOn');
+            whichPlant = "plant1";
+        } else if (whichPlant == "plant1") {
+            plantHomepage3.classList.remove('plantOn');
+            plantHomepage.classList.add('plantOn');
+            whichPlant = "plant2"
+        }
+    };
 
-// load in homecontainer options
-let homeContainer = document.querySelector('.homeContainer');
-homeContainer.classList.add('homeContainerOn');
+    // load in homecontainer options
+    let homeContainer = document.querySelector('.homeContainer');
+    homeContainer.classList.add('homeContainerOn');
+}
 
 
 // LOCATION MAP
@@ -185,12 +188,14 @@ let filterImagesEasy = document.querySelectorAll('.filter-image-easy');
 let filterImagesHard = document.querySelectorAll('.filter-image-hard');
 
 document.querySelector('.easy-filter-button').addEventListener('click', function () {
+    console.log("hallo");
     filterImagesHard.forEach(hardImage => {
         hardImage.classList.toggle('active');
     });
 })
 
 document.querySelector('.hard-filter-button').addEventListener('click', function () {
+    console.log("hallo");
     filterImagesEasy.forEach(easyImage => {
         easyImage.classList.toggle('active');
     });
