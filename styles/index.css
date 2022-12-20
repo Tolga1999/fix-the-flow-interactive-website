@@ -539,15 +539,53 @@ iframe{
     max-width: 700px;
 }
 
-.progression-bar{
+.progression-bar-content-all{
     width: 100%;
+    color: var(--text-color-white);
 }
 
 .progression-bar-content{
-    width: 50%;
-    background: var(--primary-color-orange);
+    display: flex;
+    align-items: center;
+    width: 75%;
+    background: var(--primary-color-blue);
     padding: 1rem;
     border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.progression-bar-content > p{
+    display: flex;
+    justify-content: center;
+    flex-grow: 0.25;
+}
+
+.progression-bar-all{
+    flex-grow: 2;
+    border: var(--primary-color-orange) 2px solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem
+}
+
+.progression-bar{
+    display: block;
+    background-color: var(--primary-color-orange);
+    width: 50%;
+    height: 100%;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    transition: ease 0.5s;
+}
+
+/* progression-bar 100% JS */
+.progression-bar-100{
+    width: 100%;
+}
+
+.progression-bar-percentage{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 0.15;
+    font-size: 1rem;
 }
 
 form, .vragen-h2, .vragen-card, .titel-form{
@@ -712,6 +750,7 @@ input {
     max-width: 200px;
     max-height: 200px;
     transition: ease 0.25s;
+    cursor: pointer;
 }
 
 .desktop-images > img:hover{

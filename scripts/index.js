@@ -209,9 +209,15 @@ filterImagesEasy.forEach(easyImage => {
 
 // filter button volgende
 document.querySelector('.filter-volgende-button').addEventListener('click', function () {
-    console.log("hallo")
     let form = document.querySelector('fieldset');
-    form.classList.add('fieldset-show');
     let filterImages = document.querySelector('.plant-keuze-oba-desktop-alles');
+
+    form.classList.add('fieldset-show');
     filterImages.classList.add('plant-keuze-oba-desktop-alles-hide');
+
+    let progressionBar = document.querySelector('.progression-bar');
+
+    progressionBar.classList.add('progression-bar-100');
+    document.querySelector('.progression-bar-percentage').innerHTML = '100%';
+    document.querySelector('.progression-bar-content > p').innerHTML = 'Progressie 2 / 2';
 })
