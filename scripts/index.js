@@ -188,24 +188,30 @@ let filterImagesEasy = document.querySelectorAll('.filter-image-easy');
 let filterImagesHard = document.querySelectorAll('.filter-image-hard');
 
 document.querySelector('.easy-filter-button').addEventListener('click', function () {
-    console.log("hallo");
     filterImagesHard.forEach(hardImage => {
         hardImage.classList.toggle('active');
     });
 })
 
 document.querySelector('.hard-filter-button').addEventListener('click', function () {
-    console.log("hallo");
     filterImagesEasy.forEach(easyImage => {
         easyImage.classList.toggle('active');
     });
 })
 
-filterImagesEasy.forEach(easyImage => {
+let filterImagesEasyOVerlay = document.querySelectorAll('.filter-image-overlay');
+console.log(filterImagesEasyOVerlay)
+filterImagesEasyOVerlay.forEach(easyImage => {
+    console.log(easyImage)
     easyImage.addEventListener('click', function () {
-        console.log(easyImage);
+        easyImage.classList.toggle('filter-image-overlay-show')
     })
 });
+
+// klik image
+// filterImagesEasy.addEventListener('click', function (){
+//     filterImagesEasy.classList.toggle('filter-image-overlay-show');
+// })
 
 // filter button volgende
 document.querySelector('.filter-volgende-button').addEventListener('click', function () {
