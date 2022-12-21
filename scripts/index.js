@@ -19,6 +19,11 @@ const star3 = document.querySelector('.starIcon3');
 const star4 = document.querySelector('.starIcon4');
 const star5 = document.querySelector('.starIcon5');
 
+// progressie bar
+let progressionBar = document.querySelector('.progression-bar');
+let progressionBarPercentage = document.querySelector('.progression-bar-percentage');
+let progressionBarContent = document.querySelector('.progression-bar-content > p');
+
 // overlay menu
 function menuOpen() {
     overlay.classList.add('overlayOn');
@@ -208,6 +213,10 @@ filterImagesOVerlay.forEach(overlay => {
             deleteOverlay.classList.remove('filter-image-overlay-show');
         })
         overlay.classList.toggle('filter-image-overlay-show');
+        // progressie bar
+        progressionBar.classList.add('progression-bar-50');
+        progressionBarPercentage.innerHTML = '50%';
+        progressionBarContent.innerHTML = 'Progressie 1 / 2';
     })
 });
 
@@ -219,9 +228,7 @@ document.querySelector('.filter-volgende-button').addEventListener('click', func
     form.classList.add('fieldset-show');
     filterImages.classList.add('plant-keuze-oba-desktop-alles-hide');
 
-    let progressionBar = document.querySelector('.progression-bar');
-
     progressionBar.classList.add('progression-bar-100');
-    document.querySelector('.progression-bar-percentage').innerHTML = '100%';
-    document.querySelector('.progression-bar-content > p').innerHTML = 'Progressie 2 / 2';
+    progressionBarPercentage.innerHTML = '100%';
+    progressionBarContent.innerHTML = 'Progressie 2 / 2';
 })
