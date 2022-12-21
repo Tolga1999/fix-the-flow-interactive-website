@@ -80,6 +80,7 @@
     <main>
         <section class="content-form">
             <div class="progression-bar-content-all">
+                <h1 class="titel-form">Ruilen</h1>
                 <div class="progression-bar-content">
                     <p>Progressie 0 / 2</p>
                     <div class="progression-bar-all">
@@ -101,7 +102,7 @@
                     <div class="desktop-images">
                         <div class="filter-image-overlay-all filter-image-easy">
                             <div class="filter-image-overlay"></div>
-                            <img src="../assets/cactus.jpg" alt="cactus desktop">
+                            <img class="image333" src="../assets/cactus.jpg" alt="cactus desktop">
                             <div class="subtext-overlay">
                                 <p>Makkelijk</p>
                             </div>
@@ -161,14 +162,11 @@
                 </section>
             </div>
             <fieldset class="desktop-fieldset">
-                <legend>
-                    <h1 class="titel-form">Ruilen</h1>
-                </legend>
                 <form onsubmit="tradedpage();return false">
                     <div class="labels">
                         <label for="naam">Naam <input type="text" name="naam" required></label>
-                        <label for="mobiel">Mobiel <input type="text" name="mobiel" required></label>
-                        <label for="email">Email <input type="text" name="email" required></label>
+                        <label for="mobiel">Mobiel <input type="tel" name="mobiel" required></label>
+                        <label for="email">Email <input type="email" name="email" required></label>
                     </div>
                     <div class="plantInruilen">
                         <p class="inruilText">Wat wil je inruilen?</p>

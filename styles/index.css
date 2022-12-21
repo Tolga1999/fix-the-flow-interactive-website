@@ -253,7 +253,7 @@ main {
 .pijlersAlles {
     width: 75vw;
     margin-top: 3vh;
-    
+
 }
 
 .pijlersAlles h2 {
@@ -277,7 +277,7 @@ main {
     margin-top: 3vh;
 }
 
-.pijlerFlexStart{
+.pijlerFlexStart {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,7 +339,7 @@ main {
     height: 100%;
 }
 
-.buttons > .ruilenDoneren{
+.buttons>.ruilenDoneren {
     margin-top: 4vh;
 }
 
@@ -347,7 +347,7 @@ main {
 
 /* LOCATION */
 /* visibility: hidden zodat het niet meer klikbaar is, opacity om te werken met animaties */
-.location{
+.location {
     opacity: 0;
     visibility: hidden;
     transform: translateX(25vw);
@@ -361,12 +361,13 @@ main {
     right: 0%;
     display: flex;
     justify-content: flex-end;
-    width: 100%; /* nu heeft het aan beide kanten 1% ruimte */
+    width: 100%;
+    /* nu heeft het aan beide kanten 1% ruimte */
     max-width: 400px;
     transition: ease 0.5s;
 }
 
-.h2-button-location{
+.h2-button-location {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -374,17 +375,17 @@ main {
     margin: 0 0.5rem;
 }
 
-.locationOn{
+.locationOn {
     opacity: 1;
     visibility: visible;
     transform: translateX(0vw);
 }
 
-.location h2{
+.location h2 {
     margin: 0
 }
 
-.close-location{
+.close-location {
     display: flex;
     justify-content: flex-end;
     align-self: flex-end;
@@ -394,16 +395,16 @@ main {
     transition: ease 0.5s;
 }
 
-.close-location:hover{
+.close-location:hover {
     background-color: var(--primary-color-green);
 }
 
-iframe{
+iframe {
     width: 100%;
 }
 
 /* navigation location button */
-.locationButton{
+.locationButton {
     background: none;
     border: none;
     font-size: 1.2rem;
@@ -415,6 +416,7 @@ iframe{
 .locationButton:hover {
     color: var(--primary-color-orange);
 }
+
 /* LOCATION END */
 
 /* MEDIA QUIRIES VOOR DESKTOP */
@@ -422,7 +424,7 @@ iframe{
 
     /* index.html */
     .menu,
-    .logo{
+    .logo {
         display: none;
     }
 
@@ -449,13 +451,14 @@ iframe{
         font-size: 2rem;
     }
 
-    .homeButtons, .pijlers-alles-desktop {
+    .homeButtons,
+    .pijlers-alles-desktop {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
     }
 
-    .pijlers-alles-desktop{
+    .pijlers-alles-desktop {
         align-items: stretch;
     }
 
@@ -463,7 +466,8 @@ iframe{
         margin: 0 0.75vw;
     }
 
-    .hoeWerktHetImg>img, .homeContainer p{
+    .hoeWerktHetImg>img,
+    .homeContainer p {
         display: inline;
     }
 
@@ -476,50 +480,60 @@ iframe{
         margin-left: 1vw;
     }
 
-    .location{
+    .location {
         right: 1%;
         width: 100%;
         border-radius: 0.5rem 0.5rem 0 0;
     }
+
     /* END index.html */
 
     /* form.html */
-    .content-form form{
+    .content-form form {
         margin-top: 0;
     }
 
-    .desktop-fieldset{
+    .desktop-fieldset {
         width: 100%;
     }
 
-    .inputKiesPlant2, .inruilText2, .kiesPlant2, fieldset{
+    .inputKiesPlant2,
+    .inruilText2,
+    .kiesPlant2,
+    fieldset {
         display: none;
     }
 
-    form .labels, form .plantInruilen{
+    form .labels,
+    form .plantInruilen {
         margin-bottom: 2vw;
     }
 
-    form .plantInruilen2{
+    form .plantInruilen2 {
         margin: 0;
     }
 
-    .labels > label{
+    .labels>label {
         margin-bottom: 1vw;
     }
 
-    .plant-keuze-oba-desktop-alles{
+    .plant-keuze-oba-desktop-alles {
         display: flex;
     }
 
-    .plant-keuze-oba-desktop-alles-hide{
+    .plant-keuze-oba-desktop-alles-hide {
         display: none
     }
 
-    .content-form .plant-keuze-oba-desktop{
+    .content-form .plant-keuze-oba-desktop {
         display: flex;
         flex-direction: column;
     }
+
+    .content-form .progression-bar-content-all {
+        display: flex;
+    }
+
     /* END form.html */
 }
 
@@ -530,21 +544,23 @@ iframe{
 }
 
 /* ------------ FORMULIEREN PAGINA'S ------------- */
-.content-form{
+.content-form {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     align-items: center;
     margin-top: 2vh;
     width: 100%;
     max-width: 700px;
 }
 
-.progression-bar-content-all{
+.progression-bar-content-all {
+    display: none;
     width: 100%;
     color: var(--text-color-white);
+    justify-content: flex-end;
 }
 
-.progression-bar-content{
+.progression-bar-content {
     display: flex;
     align-items: center;
     width: 75%;
@@ -553,20 +569,20 @@ iframe{
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
-.progression-bar-content > p{
+.progression-bar-content>p {
     display: flex;
     justify-content: center;
     flex-grow: 0.25;
 }
 
-.progression-bar-all{
+.progression-bar-all {
     flex-grow: 2;
     border: var(--primary-color-orange) 2px solid;
     border-radius: 0.5rem;
     padding: 0.5rem
 }
 
-.progression-bar{
+.progression-bar {
     display: block;
     background-color: var(--primary-color-orange);
     width: 0%;
@@ -577,35 +593,38 @@ iframe{
 }
 
 /* progression-bar 50% JS */
-.progression-bar-50{
+.progression-bar-50 {
     width: 50%;
 }
 
 
 /* progression-bar 100% JS */
-.progression-bar-100{
+.progression-bar-100 {
     width: 100%;
 }
 
-.progression-bar-percentage{
+.progression-bar-percentage {
     display: flex;
     justify-content: flex-end;
     flex-grow: 0.15;
     font-size: 1rem;
 }
 
-form, .vragen-h2, .vragen-card, .titel-form{
+form,
+.vragen-h2,
+.vragen-card,
+.titel-form {
     width: 90%;
 }
 
-fieldset{
+fieldset {
     border: none;
     justify-self: center;
     width: 95%;
 }
 
 /* JS class */
-.fieldset-show{
+.fieldset-show {
     display: inline;
 }
 
@@ -614,24 +633,27 @@ fieldset{
     letter-spacing: 0.2rem;
     margin: 0;
     color: var(--primary-color-blue);
+    display: flex;
+    align-items: center;
+    flex-shrink: 50;
 }
 
 form {
     background-color: var(--primary-color-blue);
     display: flex;
     flex-direction: column;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem 0 0.5rem 0.5rem;
     margin-top: 0.5vh;
     padding: 1.75rem;
     width: 100%;
     /* alles standaard achter de overlay */
 }
 
-.labels{
+.labels {
     margin-bottom: 8vw;
 }
 
-.labels label:last-child{
+.labels label:last-child {
     margin-bottom: 0;
 }
 
@@ -654,6 +676,12 @@ input {
     border-radius: 0.5rem;
 }
 
+/* input aanpassingen */
+input[type=text]:valid, input[type=tel]:valid, input[type=email]:valid{
+    background-color: var(--primary-color-green);
+    color: var(--text-color-white);
+}
+
 .plantInruilen {
     display: flex;
     align-items: center;
@@ -661,7 +689,7 @@ input {
     margin-bottom: 4vw;
 }
 
-.plantInruilen2{
+.plantInruilen2 {
     margin-bottom: 8vw;
 }
 
@@ -734,17 +762,18 @@ input {
     outline: 2px solid #38853C;
     /* outline is een lijn buiten de border */
 }
+
 /* END KIES PLANT OBA MOBILE*/
 
 /* KIES PLANT VAN OBA DESKTOP*/
-.plant-keuze-oba-desktop{
+.plant-keuze-oba-desktop {
     display: none;
     background-color: var(--primary-color-blue);
-    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.5rem 0 0.5rem 0.5rem;
     max-width: 700px;
 }
 
-.desktop-images{
+.desktop-images {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -755,19 +784,14 @@ input {
     /* height: 400px; */
 }
 
-.filter-image-overlay-all{
+.filter-image-overlay-all {
     position: relative;
     width: 200px;
     height: 200px;
     transition: ease 0.25s;
 }
 
-.filter-image-overlay-all:hover{
-    opacity: 0.5;
-    border-radius: 0.5rem;
-}
-
-.filter-image-overlay{
+.filter-image-overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -776,12 +800,12 @@ input {
 }
 
 /* toegevoegd aan overlay met JS */
-.filter-image-overlay-show{
+.filter-image-overlay-show {
     background-color: var(--primary-color-orange);
     opacity: 0.7;
 }
 
-.filter-image-overlay-all > img{
+.filter-image-overlay-all>img {
     position: relative;
     object-fit: cover;
     height: 100%;
@@ -791,48 +815,53 @@ input {
     border-radius: 0.5rem;
 }
 
+/* verander opacity van de images wanneer je hovered over de hele container */
+.filter-image-overlay-all:hover>img {
+    opacity: 0.5;
+    border-radius: 0.5rem;
+}
+
 /* subtext van de foto's */
-.filter-image-overlay-all > .subtext-overlay{
+.filter-image-overlay-all>.subtext-overlay {
     display: flex;
     justify-content: center;
     position: absolute;
     width: 100%;
     color: var(--text-color-white);
+    background-color: var(--primary-color-green);
+    border-radius: 0 0 0.5rem 0.5rem;
+    opacity: 0.9;
+    padding: 0.75rem;
     z-index: 3;
-    bottom: 10px;
+    bottom: 0;
 }
 
-.subtext-overlay > p{
+.subtext-overlay>p {
     display: flex;
     justify-content: center;
-    background-color: var(--primary-color-blue);
-    width: 60%;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    opacity: 0.9;
 }
 
 
 /* DEZE CLASS IS VOOR JAVASCRIPT */
-.active{
+.active {
     opacity: 0;
     visibility: hidden;
 }
 
-.desktop-filter-buttons{
+.desktop-filter-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
 }
 
-.desktop-filter-buttons > p{
+.desktop-filter-buttons>p {
     color: var(--text-color-white);
     font-size: 1.2rem;
     margin-right: 1vw;
 }
 
-.desktop-filter-buttons button{
+.desktop-filter-buttons button {
     color: var(--text-color-white);
     background-color: var(--primary-color-green);
     border: none;
@@ -846,21 +875,21 @@ input {
     width: 15%;
 }
 
-.desktop-filter-buttons button:hover{
+.desktop-filter-buttons button:hover {
     background-color: var(--primary-color-orange);
 }
 
-.easy-filter-button{
+.easy-filter-button {
     margin-right: 1vw;
 }
 
-.filter-volgende-button{
+.filter-volgende-button {
     margin: 1rem 0;
     transition: ease 0.5s;
     cursor: pointer;
 }
 
-.filter-volgende-button:hover{
+.filter-volgende-button:hover {
     background-color: var(--primary-color-orange);
 }
 
@@ -877,6 +906,7 @@ input {
     font-size: 1.2rem;
     align-self: center;
 }
+
 /* END FORM */
 
 .vragen {
@@ -906,11 +936,11 @@ input {
     max-width: 700px;
 }
 
-.vragen-card p{
+.vragen-card p {
     font-size: 1rem;
 }
 
-.vragen-card-p + .vragen-card-p{
+.vragen-card-p+.vragen-card-p {
     margin-top: 2vh;
 }
 

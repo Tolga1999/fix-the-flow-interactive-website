@@ -228,7 +228,33 @@ document.querySelector('.filter-volgende-button').addEventListener('click', func
     form.classList.add('fieldset-show');
     filterImages.classList.add('plant-keuze-oba-desktop-alles-hide');
 
-    progressionBar.classList.add('progression-bar-100');
-    progressionBarPercentage.innerHTML = '100%';
-    progressionBarContent.innerHTML = 'Progressie 2 / 2';
+    // scrolled naar boven wanneer je klikt op volgende
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 })
+
+// form
+let formName = document.querySelector('input[type=text]');
+let formPhoneNumber = document.querySelector('input[type=tel]');
+let formEmail = document.querySelector('input[type=email');
+let formFile = document.querySelector('input[type=file]');
+
+let inputs = document.querySelectorAll('input')
+inputs.forEach(input => {
+    input.addEventListener('focusout', validProgress);
+    input.addEventListener('focusin', validProgress);
+})
+
+function validProgress() {
+    if (formName.checkValidity() && formPhoneNumber.checkValidity() && formEmail.checkValidity() && formFile.checkValidity()) {
+        progressionBar.classList.add('progression-bar-100');
+        progressionBarPercentage.innerHTML = '100%';
+        progressionBarContent.innerHTML = 'Progressie 2 / 2';
+    }else{
+        progressionBar.classList.remove('progression-bar-100');
+        progressionBarPercentage.innerHTML = '50%';
+        progressionBarContent.innerHTML = 'Progressie 1 / 2';
+    }
+}
