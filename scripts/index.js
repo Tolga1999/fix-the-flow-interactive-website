@@ -235,7 +235,7 @@ document.querySelector('.filter-volgende-button').addEventListener('click', func
     });
 })
 
-// form
+// form progression bar with feedback
 let formName = document.querySelector('input[type=text]');
 let formPhoneNumber = document.querySelector('input[type=tel]');
 let formEmail = document.querySelector('input[type=email');
