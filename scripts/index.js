@@ -199,19 +199,17 @@ document.querySelector('.hard-filter-button').addEventListener('click', function
     });
 })
 
-let filterImagesEasyOVerlay = document.querySelectorAll('.filter-image-overlay');
-console.log(filterImagesEasyOVerlay)
-filterImagesEasyOVerlay.forEach(easyImage => {
-    console.log(easyImage)
-    easyImage.addEventListener('click', function () {
-        easyImage.classList.toggle('filter-image-overlay-show')
+// klik image
+let filterImagesOVerlay = document.querySelectorAll('.filter-image-overlay');
+filterImagesOVerlay.forEach(overlay => {
+    // easyImage.classList.remove('filter-image-overlay-show')
+    overlay.addEventListener('click', function () {
+        filterImagesOVerlay.forEach(deleteOverlay => {
+            deleteOverlay.classList.remove('filter-image-overlay-show');
+        })
+        overlay.classList.toggle('filter-image-overlay-show');
     })
 });
-
-// klik image
-// filterImagesEasy.addEventListener('click', function (){
-//     filterImagesEasy.classList.toggle('filter-image-overlay-show');
-// })
 
 // filter button volgende
 document.querySelector('.filter-volgende-button').addEventListener('click', function () {
