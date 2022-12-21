@@ -677,7 +677,9 @@ input {
 }
 
 /* input aanpassingen */
-input[type=text]:valid, input[type=tel]:valid, input[type=email]:valid{
+input[type=text]:valid,
+input[type=tel]:valid,
+input[type=email]:valid {
     background-color: var(--primary-color-green);
     color: var(--text-color-white);
 }
