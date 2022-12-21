@@ -493,14 +493,23 @@ iframe {
         margin-top: 0;
     }
 
-    .desktop-fieldset {
+    /* h1 uit bij desktop (je ziet dan een andere h1 */
+    .titel-form-desktop{
+        display: none;
+    }
+
+    .content-form > .titel-donate-form{
+        width: 100%;
+    }
+
+    .trade-form-fieldset, .donate-form-fieldset {
         width: 100%;
     }
 
     .inputKiesPlant2,
     .inruilText2,
     .kiesPlant2,
-    fieldset {
+    .trade-form-fieldset {
         display: none;
     }
 
@@ -614,7 +623,7 @@ form,
 .vragen-h2,
 .vragen-card,
 .titel-form {
-    width: 90%;
+    width: 95%;
 }
 
 fieldset {
@@ -628,7 +637,7 @@ fieldset {
     display: inline;
 }
 
-.titel-form {
+.titel-form{
     font-size: 2.75rem;
     letter-spacing: 0.2rem;
     margin: 0;
@@ -636,6 +645,15 @@ fieldset {
     display: flex;
     align-items: center;
     flex-shrink: 50;
+    width: 95%;
+}
+
+.titel-form-desktop{
+    font-size: 2.75rem;
+    letter-spacing: 0.2rem;
+    color: var(--primary-color-blue);
+    width: 95%;
+    margin: 0;
 }
 
 form {
@@ -1005,8 +1023,9 @@ input[type=email]:valid {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 60vh;
-    width: 87vw;
+    height: 45vh;
+    width: 95%;
+    max-width: 600px;
     border: 3px solid var(--primary-color-green);
     border-radius: 0.5rem;
     padding: 3vh 0;
@@ -1030,20 +1049,23 @@ input[type=email]:valid {
 }
 
 .meningText {
+    display: flex;
+    justify-content: center;
     font-size: 1.1rem;
-    width: 60%;
+    width: 70%;
     margin-top: 0.5vh;
 }
 
 .stars {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-top: 1vh;
-    width: 60%;
 }
 
 .starIcon {
-    width: 10vw;
+    width: 15%;
+    max-width: 80px;
     color: var(--primary-color-blue);
     opacity: 0.5;
 }
@@ -1053,9 +1075,12 @@ input[type=email]:valid {
 }
 
 .generatedCode {
+    display: flex;
+    justify-content: center;
     margin-top: 1vh;
     width: 60%;
     font-size: 1.1rem;
+    align-self: center;
 }
 
 .generatedCode span {
@@ -1063,23 +1088,8 @@ input[type=email]:valid {
     /* inline block needed because its not a block element */
     margin-top: 0.8vh;
     font-weight: bold;
+    font-size: 1.5rem;
     color: var(--primary-color-blue);
-}
-
-.googleMapsContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.googleMapsContent p {
-    font-size: 1.1rem;
-    width: 80%;
-}
-
-.googleMapsFoto {
-    margin: 1vh 0;
-    width: 80%;
 }
 
 .informatieText h1 {
@@ -1114,6 +1124,7 @@ input[type=email]:valid {
 }
 
 .informatieText {
-    width: 80vw;
+    width: 95%;
+    max-width: 600px;
     margin: 3vh 0;
 }

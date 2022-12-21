@@ -51,10 +51,10 @@
         </div>
     </header>
     <main>
-        <section class="sectionForm">
-            <h1 class="titelForm">Doneren</h1>
-            <form onsubmit="donatedpage();return false">
-                <!-- return false nodig zodat page niet meer reload -->
+        <section class="content-form">
+            <h1 class="titel-form titel-donate-form">Doneren</h1>
+            <!-- return false nodig zodat page niet meer reload -->
+            <!-- <form onsubmit="donatedpage();return false">
                 <div class="labelInput">
                     <div>
                         <label for="naam">Naam</label>
@@ -73,10 +73,26 @@
                     <p class="doneerText">Wat wil je Doneren?</p>
                     <img class="doneerPlant" src="../assets/cactus2.jpg" alt="kiesPlant">
                     <input type="file" class="doneerInputKiesPlant" accept="image/png, image/jpeg"
-                        onchange="selectedDoneerFile()" required> <!-- kieze van je plantje op je computer -->
+                        onchange="selectedDoneerFile()" required>
                 </div>
                 <input class="submit" type="submit" value="Doneer">
-            </form>
+            </form> -->
+            <fieldset class="donate-form-fieldset">
+                <form onsubmit="tradedpage();return false">
+                    <div class="labels">
+                        <label for="naam">Naam <input type="text" name="naam" required></label>
+                        <label for="mobiel">Mobiel <input type="tel" name="mobiel" required></label>
+                        <label for="email">Email <input type="email" name="email" required></label>
+                    </div>
+                    <div class="plantInruilen">
+                        <p class="inruilText">Wat wil je doneren?</p>
+                        <img class="kiesPlant" src="../assets/plant2.jpg" alt="kiesPlant">
+                        <input type="file" class="inputKiesPlant" accept="image/png, image/jpeg"
+                            onchange="selectedFile()" required>
+                    </div>
+                    <input class="submit" type="submit" value="Doneren">
+                </form>
+            </fieldset>
         </section>
     </main>
     <div class="menu">
