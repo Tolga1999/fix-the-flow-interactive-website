@@ -135,7 +135,7 @@ function normallStars() {
     star5.style.opacity = '0.5';
 }
 
-// gebruik dit stukje code alleen bij index.html
+// gebruik dit stukje code alleen bij index.html (als pagina de class "index" include == true)
 if (document.querySelector('.index')) {
     // IMAGE LOOP
     let plantHomepage = document.querySelector('.plant');
