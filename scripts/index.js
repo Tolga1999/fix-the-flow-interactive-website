@@ -90,11 +90,11 @@ function selectedDoneerFile() {
 
 // donated page
 function tradedpage() {
-    window.location.href = "./html/traded.html"; // verander locatie na het completen van de form naar donated.html
+    window.location.href = "./traded.html"; // verander locatie na het completen van de form naar donated.html
 }
 
 function donatedpage() {
-    window.location.href = "./html/donated.html"; // verander locatie na het completen van de form naar donated.html
+    window.location.href = "./donated.html"; // verander locatie na het completen van de form naar donated.html
 }
 
 function fillStars(star) {
@@ -136,7 +136,7 @@ function normallStars() {
 }
 
 // gebruik dit stukje code alleen bij index.html
-if (document.location.pathname == '/index.html' || document.location.pathname == 'https://tolga1999.github.io/fix-the-flow-interactive-website/') {
+if (document.querySelector('.index')) {
     // IMAGE LOOP
     let plantHomepage = document.querySelector('.plant');
     let plantHomepage2 = document.querySelector('.plant2');
