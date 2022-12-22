@@ -90,6 +90,10 @@ nav li a {
     transition: ease 0.5s;
 }
 
+.anchor-active{
+    color: var(--primary-color-orange);
+}
+
 nav li a:hover {
     color: var(--primary-color-orange);
 }
