@@ -295,18 +295,19 @@ main {
 
 .menu {
     position: sticky;
-    bottom: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    z-index: 5;
+    top: 0;
 }
 
 #menuButton {
+    position: absolute;
     color: var(--text-color-white);
     font-size: 1.2rem;
+    padding: 1.5rem 1.25rem 2.5rem 2.25rem;
     background-color: var(--primary-color-green);
-    padding: 3.5vw;
-    width: 30vw;
-    border-radius: 1.5rem 1.5rem 0 0;
+    border-radius: 0 0 0 5rem;
     border: none;
 }
 
@@ -494,15 +495,16 @@ iframe {
     }
 
     /* h1 uit bij desktop (je ziet dan een andere h1 */
-    .titel-form-desktop{
+    .titel-form-desktop {
         display: none;
     }
 
-    .content-form > .titel-donate-form{
+    .content-form>.titel-donate-form {
         width: 100%;
     }
 
-    .trade-form-fieldset, .donate-form-fieldset {
+    .trade-form-fieldset,
+    .donate-form-fieldset {
         width: 100%;
     }
 
@@ -637,7 +639,7 @@ fieldset {
     display: inline;
 }
 
-.titel-form{
+.titel-form {
     font-size: 2.75rem;
     letter-spacing: 0.2rem;
     margin: 0;
@@ -648,7 +650,7 @@ fieldset {
     width: 95%;
 }
 
-.titel-form-desktop{
+.titel-form-desktop {
     font-size: 2.75rem;
     letter-spacing: 0.2rem;
     color: var(--primary-color-blue);
