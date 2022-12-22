@@ -1028,7 +1028,8 @@ input[type=email]:valid {
     height: 45vh;
     width: 95%;
     max-width: 600px;
-    border: 3px solid var(--primary-color-green);
+    background-color: var(--primary-color-blue);
+    color: var(--text-color-white);
     border-radius: 0.5rem;
     padding: 3vh 0;
 }
@@ -1068,7 +1069,6 @@ input[type=email]:valid {
 .starIcon {
     width: 15%;
     max-width: 80px;
-    color: var(--primary-color-blue);
     opacity: 0.5;
 }
 
@@ -1091,7 +1091,7 @@ input[type=email]:valid {
     margin-top: 0.8vh;
     font-weight: bold;
     font-size: 1.5rem;
-    color: var(--primary-color-blue);
+    color: var(--text-color-white);
 }
 
 .informatieText h1 {
