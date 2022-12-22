@@ -48,10 +48,10 @@ function locationShowOverlayMenu() {
 // ruilen pagina
 function selectedFile() {
     inruilText.innerHTML = 'Klik nogmaals voor een andere keuze';
-    if (kiesPlant.src === 'http://127.0.0.1:5500/assets/cactus.jpg')
-        kiesPlant.src = '/assets/plant3.jpg' //hardcoded omdat ik geen local resources kan inladen
-    else {
-        kiesPlant.src = '/assets/cactus.jpg';
+    if (kiesPlant.src === 'http://127.0.0.1:5500/assets/cactus.jpg') {
+        kiesPlant.src = '../assets/plant3.jpg' //hardcoded omdat ik geen local resources kan inladen
+    } else {
+        kiesPlant.src = '../assets/cactus.jpg';
     }
 }
 
@@ -73,28 +73,28 @@ function gekozenPlantje() {
     body.style.overflow = 'scroll';
     let kiesPlant2 = document.querySelector('.kiesPlant2');
     if (kiesPlant2.src == 'http://127.0.0.1:5500/assets/plant4.jpg') {
-        kiesPlant2.src = '/assets/plant.jpg';
+        kiesPlant2.src = '../assets/plant.jpg';
     } else
-        kiesPlant2.src = '/assets/plant4.jpg';
+        kiesPlant2.src = '../assets/plant4.jpg';
 }
 
 // doneer pagina
 function selectedDoneerFile() {
     doneerText.innerHTML = 'Klik nogmaals voor een andere keuze';
     if (doneerPlant.src == 'http://127.0.0.1:5500/assets/cactus.jpg')
-        doneerPlant.src = '/assets/plant3.jpg'; //hardcoded omdat ik geen local resources kan inladen
+        doneerPlant.src = '../assets/plant3.jpg'; //hardcoded omdat ik geen local resources kan inladen
     else {
-        doneerPlant.src = '/assets/cactus.jpg';
+        doneerPlant.src = '../assets/cactus.jpg';
     }
 }
 
 // donated page
 function tradedpage() {
-    window.location.href = "/html/traded.html"; // verander locatie na het completen van de form naar donated.html
+    window.location.href = "./html/traded.html"; // verander locatie na het completen van de form naar donated.html
 }
 
 function donatedpage() {
-    window.location.href = "/html/donated.html"; // verander locatie na het completen van de form naar donated.html
+    window.location.href = "./html/donated.html"; // verander locatie na het completen van de form naar donated.html
 }
 
 function fillStars(star) {
@@ -136,7 +136,7 @@ function normallStars() {
 }
 
 // gebruik dit stukje code alleen bij index.html
-if (document.location.pathname == '/index.html') {
+if (document.location.pathname == '/index.html' || document.location.pathname == 'https://tolga1999.github.io/fix-the-flow-interactive-website/') {
     // IMAGE LOOP
     let plantHomepage = document.querySelector('.plant');
     let plantHomepage2 = document.querySelector('.plant2');
@@ -252,7 +252,7 @@ function validProgress() {
         progressionBar.classList.add('progression-bar-100');
         progressionBarPercentage.innerHTML = '100%';
         progressionBarContent.innerHTML = 'Progressie 2 / 2';
-    }else{
+    } else {
         progressionBar.classList.remove('progression-bar-100');
         progressionBarPercentage.innerHTML = '50%';
         progressionBarContent.innerHTML = 'Progressie 1 / 2';
