@@ -16,6 +16,8 @@ De flow van mijn website ziet er als volgt uit: Homepagina -> ruilen of doneren 
 
 De focus van deze sprint is het filteren van de stekjes, wat te maken heeft met de ruil pagina.
 
+Je kan op de ruil pagina filteren tussen makkelijke en moeilijke plantjes, een klik op een plantje vult de progressiebar met 50% (user feedback). Na het kiezen van een plant kan je naar het formulier waarin je je gegevens kan invullen. Tot slot krijg je in de "ruil gegevens pagina" een generated code die je kan inruilen voor het plantje dat je hebt gereserveerd.
+
 <!-- Voeg een mooie poster visual toe 📸 -->
 _Wirelow ontwerp:_
 
@@ -32,7 +34,72 @@ https://tolga1999.github.io/fix-the-flow-interactive-website/
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
+Dit project is gebouwd met HTML, CSS en JS. 
 
+HTML structuur:
+
+``` HTML
+<body>
+    <main>
+        <!-- progriessie bar -->
+        <section class="content-form">
+            <h1 class="titel-form-desktop">Ruilen</h1>
+            <div class="progression-bar-content-all">
+                <h1 class="titel-form">Ruilen</h1>
+                <div class="progression-bar-content">
+                    <p>Progressie 0 / 2</p>
+                    <div class="progression-bar-all">
+                        <span class="progression-bar"></span>
+                    </div>
+                    <div class="progression-bar-percentage">
+                        <p>0%</p>
+                    </div>
+                </div>
+            </div>
+            <!-- filter keuzes -->
+            <div class="plant-keuze-oba-desktop-alles">
+                <section class="plant-keuze-oba-desktop">
+                    <div class="desktop-filter-buttons">
+                        <p>Kies hier de moeilijkheidsgraad van uw plantje</p>
+                        <button class="easy-filter-button">Makkelijk</button>
+                        <button class="hard-filter-button">Moeilijk</button>
+                    </div>
+                  
+                    <!-- keuze plantjes -->
+                    <div class="desktop-images">
+                        <div class="filter-image-overlay-all filter-image-easy">
+                            <div class="filter-image-overlay"></div>
+                            <img class="image333" src="../assets/cactus.jpg" alt="cactus desktop">
+                            <div class="subtext-overlay">
+                                <p>Makkelijk</p>
+                            </div>
+                        </div>
+                      
+                        <div class="filter-image-overlay-all filter-image-hard">
+                            <div class="filter-image-overlay"></div>
+                            <img src="../assets/plant.jpg" alt="cactus desktop">
+                            <div class="subtext-overlay">
+                                <p>Moeilijk</p>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <!-- knop naar het formulier (next step) -->
+                    <button class="submit filter-volgende-button"> Volgende</button>
+                </section>
+            </div>
+            
+            <!-- het formulier -->
+            <fieldset class="trade-form-fieldset">
+                <form onsubmit="tradedpage();return false">
+                 <!-- inhoud formulier -->
+                </form>
+             </fieldset>
+          
+        </section>
+    </main>
+</body>
+```
 
 
 ## Licentie
