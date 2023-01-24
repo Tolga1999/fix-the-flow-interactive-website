@@ -12,6 +12,10 @@ Fix the flow interactive website - Buurtcampus
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+De flow van mijn website ziet er als volgt uit: Homepagina -> ruilen of doneren -> ruil/doneer formulier pagina -> ruil/doneer gegevens.
+
+De focus van deze sprint is het filteren van de stekjes, wat te maken heeft met de ruil pagina.
+
 <!-- Voeg een mooie poster visual toe 📸 -->
 _Wirelow ontwerp:_
 
