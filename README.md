@@ -101,6 +101,77 @@ HTML structuur:
 </body>
 ```
 
+Belangrijke JS
+
+Dit is code voor het filteren van de plantjes, er wordt hier gebruik gemaakt van opacity. Na het klikken van "makkelijk" wordt de er een class toegevoegd aan de moeilijke plantjes genaamd "active" waarin de opacity op 0 wordt gezet.
+``` JS
+// FILTEREN IMGAGES
+// select images
+let filterImagesEasy = document.querySelectorAll('.filter-image-easy');
+let filterImagesHard = document.querySelectorAll('.filter-image-hard');
+
+document.querySelector('.easy-filter-button').addEventListener('click', function () {
+    filterImagesHard.forEach(hardImage => {
+        hardImage.classList.toggle('active');
+    });
+})
+
+})
+```
+
+Dit is code voor de progressiebar. Er wordt een class toegevoegd aan de progressiebar genaamd "progression-bar-50" wat aangeeft dat de progressiebar 50% gevuld mag worden (dit wordt gedaan door de width aan te passen).
+``` JS
+// klik image
+let filterImagesOVerlay = document.querySelectorAll('.filter-image-overlay');
+filterImagesOVerlay.forEach(overlay => {
+    // easyImage.classList.remove('filter-image-overlay-show')
+    overlay.addEventListener('click', function () {
+        filterImagesOVerlay.forEach(deleteOverlay => {
+            deleteOverlay.classList.remove('filter-image-overlay-show');
+        })
+        overlay.classList.toggle('filter-image-overlay-show');
+        // progressie bar
+        progressionBar.classList.add('progression-bar-50');
+        progressionBarPercentage.innerHTML = '50%';
+        progressionBarContent.innerHTML = 'Progressie 1 / 2';
+    })
+});
+```
+
+Belangrijke CSS
+
+De class active die zorgt voor het filteren dankzij `opacity`.
+``` CSS
+/* DEZE CLASS IS VOOR JAVASCRIPT */
+.active {
+    opacity: 0;
+    visibility: hidden;
+}
+```
+
+De progressie bar class waarin de `width` standaard 0% is. De classes `progression-bar-50` en `progression-bar-100` die de width aanpassen van de progressie bar (overschrijven de standaard waarde van de progressiebar), dit wordt gedaan door middel van JS.
+``` CSS
+.progression-bar {
+    display: block;
+    background-color: var(--primary-color-orange);
+    width: 0%;
+    height: 100%;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    transition: ease 0.5s;
+}
+
+/* progression-bar 50% JS */
+.progression-bar-50 {
+    width: 50%;
+}
+
+
+/* progression-bar 100% JS */
+.progression-bar-100 {
+    width: 100%;
+}
+```
 
 ## Licentie
 
